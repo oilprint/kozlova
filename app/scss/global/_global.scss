@@ -1,0 +1,66 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: "Tenor Sans",
+    sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+  color: $dark;
+  background-color: $light;
+  overflow-x: hidden;
+
+  &.lock {
+    overflow-y: hidden;
+  }
+}
+
+.wrapper {
+  position: relative;
+  overflow-x: hidden;
+
+  &.lock {
+    overflow-y: hidden;
+  }
+}
+
+main {
+  flex-grow: 1;
+}
+
+.container {
+  max-width: 1410px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.section {
+  padding: 60px 0;
+
+  @media (min-width: 1200px) {
+    padding: 90px 0;
+  }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.title {
+  font-family: "Archivo",
+    sans-serif;
+}
