@@ -1,5 +1,5 @@
 .hero {
-  padding: 20px 0 180px;
+  padding: 20px 0 220px;
   position: relative;
 
   &__inner {
@@ -30,6 +30,7 @@
     font-size: 140px;
     line-height: 1;
     color: $accent;
+    margin-bottom: -10px;
 
     @media (max-width: 1440px) {
       font-size: calc(52px + (140 - 52) * ((100vw - 375px) / (1440 - 375)));
@@ -54,7 +55,12 @@
     display: flex;
     justify-content: space-between;
     gap: 30px;
-    flex-wrap: wrap;
+
+
+    @media (max-width: 1200px) {
+      flex-wrap: wrap;
+      gap: 16px;
+    }
   }
 
   &__subtitle {

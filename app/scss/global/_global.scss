@@ -42,10 +42,10 @@ main {
 }
 
 .section {
-  padding: 60px 0;
+  padding: 90px 0;
 
-  @media (min-width: 1200px) {
-    padding: 90px 0;
+  @media (max-width: 1200px) {
+    padding: 60px 0;
   }
 }
 
