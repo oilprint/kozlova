@@ -6,9 +6,9 @@ body {
 body {
   display: flex;
   flex-direction: column;
-  font-family: "Tenor Sans",
+  font-family: "Archivo",
     sans-serif;
-  font-size: 14px;
+  font-size: 20px;
   font-weight: 400;
   line-height: 1.7;
   letter-spacing: 0.03em;
@@ -63,4 +63,10 @@ main {
 .title {
   font-family: "Archivo",
     sans-serif;
+}
+
+.text-accent {
+  color: $accent;
+  text-transform: uppercase;
+  font-weight: 500;
 }
