@@ -60,13 +60,69 @@ main {
   border: 0;
 }
 
-.title {
-  font-family: "Archivo",
-    sans-serif;
-}
-
 .text-accent {
   color: $accent;
   text-transform: uppercase;
   font-weight: 500;
+}
+
+.title {
+  line-height: 1;
+  text-transform: uppercase;
+
+  &__text {
+    font-size: 64px;
+    font-weight: 700;
+    color: $dark-grey;
+    margin-bottom: -10px;
+
+    @media (max-width: 992px) {
+      font-size: 56px;
+    }
+
+    @media (max-width: 576px) {
+      font-size: 48px;
+    }
+  }
+
+  &__title {
+    position: relative;
+    display: inline-block;
+    font-family: "Tenor Sans",
+      sans-serif;
+    font-size: 110px;
+
+    &::before {
+      display: block;
+      content: "";
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      background-color: $accent;
+      bottom: 19px;
+      right: -26px;
+
+      @media (max-width: 992px) {
+        width: 26px;
+        height: 26px;
+        bottom: 15px;
+        right: -22px;
+      }
+
+      @media (max-width: 576px) {
+        width: 20px;
+        height: 20px;
+        bottom: 12px;
+        right: -17px;
+      }
+    }
+
+    @media (max-width: 992px) {
+      font-size: 90px;
+    }
+
+    @media (max-width: 576px) {
+      font-size: 70px;
+    }
+  }
 }
