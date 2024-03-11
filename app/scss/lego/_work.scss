@@ -25,7 +25,9 @@
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
+    padding-top: 10vh;
+
 
     @media (max-width: 768px) {
       padding: 30px 0;

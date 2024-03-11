@@ -85,12 +85,12 @@ main {
     }
   }
 
-  &__title {
+  &__headline {
     position: relative;
     display: inline-block;
     font-family: "Tenor Sans",
       sans-serif;
-    font-size: 110px;
+    font-size: 90px;
 
     &::before {
       display: block;
@@ -99,30 +99,30 @@ main {
       width: 30px;
       height: 30px;
       background-color: $accent;
-      bottom: 19px;
+      bottom: 15px;
       right: -26px;
 
       @media (max-width: 992px) {
-        width: 26px;
-        height: 26px;
-        bottom: 15px;
-        right: -22px;
-      }
-
-      @media (max-width: 576px) {
         width: 20px;
         height: 20px;
         bottom: 12px;
         right: -17px;
       }
+
+      @media (max-width: 576px) {
+        width: 18px;
+        height: 18px;
+        bottom: 10px;
+        right: -17px;
+      }
     }
 
     @media (max-width: 992px) {
-      font-size: 90px;
+      font-size: 70px;
     }
 
     @media (max-width: 576px) {
-      font-size: 70px;
+      font-size: 60px;
     }
   }
 }
