@@ -12,16 +12,25 @@
     width: 40%;
     z-index: 2;
 
-    // outline: 1px solid red;
+    @media (max-width: 992px) {
+      width: 48%;
+    }
 
+    @media (max-width: 768px) {
+      width: 100%;
+    }
   }
 
   &__info {
-
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    @media (max-width: 768px) {
+      padding: 30px 0;
+      height: auto;
+    }
   }
 
   &__subtitle {
@@ -29,6 +38,10 @@
     line-height: 1;
     color: $grey;
     margin-bottom: 10px;
+
+    @media (max-width: 992px) {
+      font-size: 20px;
+    }
   }
 
   &__title {
@@ -37,6 +50,11 @@
     font-weight: 700;
     text-transform: uppercase;
     margin-bottom: 30px;
+
+    @media (max-width: 992px) {
+      font-size: 36px;
+      margin-bottom: 16px;
+    }
   }
 
   &__text {
@@ -48,6 +66,7 @@
     padding-left: 20px;
     font-size: 20px;
     line-height: 1.3;
+    margin-bottom: 20px;
 
     &::after {
       position: absolute;
@@ -60,11 +79,62 @@
     }
   }
 
+  &__skills {
+    margin-bottom: 80px;
+
+    @media (max-width: 992px) {
+      margin-bottom: 40px;
+    }
+
+    @media (max-width: 768px) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__btns {
+    display: flex;
+    gap: 20px;
+  }
+
+  &__extra-link {
+    display: none;
+    margin: 0 auto;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    transition: outline 0.3s ease-in, opacity 0.3s ease-in;
+
+    &:focus {
+      outline: solid 1px $accent;
+      outline-offset: 2px;
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
+
+    @media (max-width: 768px) {
+      display: block;
+    }
+
+    @media (max-width: 480px) {
+      height: 200px;
+    }
+  }
+
+  &__extra-image {
+    object-fit: cover;
+  }
+
   &__right {
     width: 48%;
     height: auto;
-    // background: green;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
   }
+
 
   &__right-bl {
     display: flex;
@@ -82,7 +152,7 @@
       display: inline-block;
       content: "work";
       text-transform: uppercase;
-      bottom: 0;
+      bottom: 10px;
       left: 0;
       transform: translateX(-110%);
       right: 0;
@@ -90,7 +160,7 @@
       font-family: "Archivo",
         sans-serif;
       font-weight: 700;
-      font-size: 240px;
+      font-size: 220px;
       line-height: 1;
       color: $light-grey;
     }
@@ -123,6 +193,4 @@
     height: 100%;
     object-fit: cover;
   }
-
-
 }

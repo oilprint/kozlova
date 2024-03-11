@@ -126,3 +126,48 @@ main {
     }
   }
 }
+
+.skills {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+
+
+  &__item {
+    filter: saturate(0%);
+    -webkit-filter: saturate(0%);
+    -moz-filter: saturate(0%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: filter 0.4s ease-in-out;
+
+    &:hover {
+      filter: saturate(100%);
+      -webkit-filter: saturate(100%);
+      -moz-filter: saturate(100%);
+    }
+  }
+
+  &__icon {
+    width: 36px;
+    height: 36px;
+
+    &--git {
+      width: 65px;
+      height: 28px;
+    }
+
+    &--tailwind {
+      width: 144px;
+      height: 18px;
+    }
+
+    @media (max-width: 768px) {
+      width: 32px;
+      height: 32px;
+    }
+  }
+}

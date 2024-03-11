@@ -33,10 +33,34 @@
   }
 
   &__content {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     gap: 20px;
+
+    &::before {
+      position: absolute;
+      z-index: 0;
+      display: inline-block;
+      content: "about";
+      text-transform: uppercase;
+      bottom: -20px;
+      left: 0;
+      right: 0;
+      font-family: "Archivo",
+        sans-serif;
+      font-weight: 700;
+      font-size: 220px;
+      line-height: 1;
+      color: $light-grey;
+    }
+
+    @media (max-width: 1440px) {
+      &::before {
+        font-size: calc(62px + (240 - 62) * ((100vw - 375px) / (1440 - 375)));
+      }
+    }
 
     @media (max-width: 576px) {
       order: 1;
@@ -56,39 +80,7 @@
     }
   }
 
-  &__list {
-    display: flex;
-    gap: 16px;
-    align-items: center;
-    flex-wrap: wrap;
-  }
 
-  &__item {
-    filter: saturate(0%);
-    -webkit-filter: saturate(0%);
-    -moz-filter: saturate(0%);
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: filter 0.4s ease-in-out;
-
-    &:hover {
-      filter: saturate(100%);
-      -webkit-filter: saturate(100%);
-      -moz-filter: saturate(100%);
-    }
-  }
-
-  &__icon {
-    width: 44px;
-    height: 44px;
-
-    @media (max-width: 768px) {
-      width: 32px;
-      height: 32px;
-    }
-  }
 
 
 }
