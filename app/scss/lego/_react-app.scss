@@ -1,4 +1,33 @@
 .react {
+  &__wrapper {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      z-index: 0;
+      display: inline-block;
+      content: "react app";
+      text-transform: uppercase;
+      bottom: -90px;
+      left: 0;
+      right: 0;
+      text-align: center;
+      font-family: "Archivo",
+        sans-serif;
+      font-weight: 700;
+      font-size: 220px;
+      line-height: 1;
+      color: $light-grey;
+    }
+
+    @media (max-width: 1440px) {
+      &::before {
+        font-size: calc(56px + (220 - 56) * ((100vw - 375px) / (1440 - 375)));
+        bottom: calc(-90px + 2vw);
+      }
+    }
+  }
+
   &__title {
     margin-bottom: 40px;
 
@@ -12,12 +41,17 @@
   }
 
   &__list {
+    position: relative;
+    z-index: 3;
     display: flex;
     gap: 50px;
+
     justify-content: space-between;
 
     @media (max-width: 768px) {
+      flex-wrap: wrap;
       gap: 30px;
+      row-gap: 50px;
     }
   }
 
@@ -48,6 +82,14 @@
   &__img {
     object-fit: cover;
     transition: transform 0.3s ease-in;
+
+    @media (max-width: 768px) {
+      height: 300px;
+    }
+
+    @media (max-width: 480px) {
+      height: 200px;
+    }
   }
 
 

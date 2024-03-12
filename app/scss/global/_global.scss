@@ -47,6 +47,10 @@ main {
   @media (max-width: 1200px) {
     padding: 60px 0;
   }
+
+  @media (max-width: 768px) {
+    padding: 40px 0;
+  }
 }
 
 .sr-only {
@@ -150,6 +154,10 @@ main {
       font-size: 36px;
       margin-bottom: 16px;
     }
+
+    &--small {
+      margin-bottom: 20px;
+    }
   }
 
   &__text {
@@ -172,18 +180,18 @@ main {
       width: 6px;
       background-color: $accent;
     }
-  }
 
-  &__skills {
-    margin-bottom: 48px;
-
-    @media (max-width: 992px) {
-      margin-bottom: 40px;
+    &--small {
+      margin-bottom: 30px;
     }
 
     @media (max-width: 768px) {
-      margin-bottom: 30px;
+      margin-bottom: 16px;
     }
+  }
+
+  &__skills {
+    flex-wrap: nowrap;
   }
 
   &__btns {
@@ -221,6 +229,33 @@ main {
     object-fit: cover;
   }
 
+  &__bottom {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    gap: 48px;
+
+
+    @media (max-width: 992px) {
+      gap: 40px;
+      row-gap: 16px;
+    }
+
+    @media (max-width: 768px) {
+      gap: 30px;
+      row-gap: 16px;
+    }
+
+    &--small {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+
+  }
+
 }
 
 .skills {
@@ -228,7 +263,6 @@ main {
   gap: 8px;
   align-items: center;
   flex-wrap: wrap;
-
 
   &__item {
     filter: saturate(0%);
@@ -248,8 +282,8 @@ main {
   }
 
   &__icon {
-    width: 36px;
-    height: 36px;
+    width: 28px;
+    height: 28px;
 
     &--git {
       width: 65px;
@@ -257,13 +291,8 @@ main {
     }
 
     &--tailwind {
-      width: 144px;
-      height: 18px;
-    }
-
-    @media (max-width: 768px) {
-      width: 32px;
-      height: 32px;
+      width: 100px;
+      height: 14px;
     }
   }
 }
