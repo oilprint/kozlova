@@ -5,6 +5,14 @@
         <img class="logo__img" src="./images/icons/logo.svg" alt="Designer Developer Iryna Kozlova" width="150"
           height="30">
       </a>
+
+      <button class="header__mobile-btn mobile-btn" type="button">
+        <span class=" sr-only">Open menu</span>
+        <svg class="mobile-btn__icon" width="44" height="44">
+          <use href="./images/icons/symbol-defs.svg#icon-open-menu"></use>
+        </svg>
+      </button>
+
       <ul class="header__list">
         <li class="header__item">
           <a href="#" class="header__item-link">Work</a>
@@ -14,5 +22,55 @@
         </li>
       </ul>
     </nav>
-  </div>
+
+    <div class="mobile-menu">
+      <div class="mobile-menu__menu">
+        <ul class="mobile-menu__list">
+          <li class="mobile-menu__item">
+            <a class="mobile-menu__link " href="#">
+              Work
+            </a>
+          </li>
+          <li class="mobile-menu__item">
+            <a class="mobile-menu__link @@works" href="#">
+              Contact
+            </a>
+          </li>
+        </ul>
+        <a class="mobile-menu__contact-link" href="mailto:kozlova.ux@gmail.com">
+          kozlova.ux@gmail.com
+        </a>
+        <ul class="mobile-menu__social">
+          <li class="mobile-menu__social-item">
+            <a href="#" class="mobile-menu__social-link">
+              <svg class="mobile-menu__social-icon" width="20" height="20">
+                <use href="./images/icons/symbol-defs.svg#icon-linkedin"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="mobile-menu__social-item">
+            <a href="#" class="mobile-menu__social-link">
+              <svg class="mobile-menu__social-icon" width="20" height="20">
+                <use href="./images/icons/symbol-defs.svg#icon-github-btn"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="mobile-menu__social-item">
+            <a href="#" class="mobile-menu__social-link">
+              <svg class="mobile-menu__social-icon" width="20" height="20">
+                <use href="./images/icons/symbol-defs.svg#icon-instagram"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <button class="mobile-menu__button mobile-btn mobile-btn--close" type="button">
+        <span class=" sr-only">Close menu</span>
+        <svg class="mobile-btn__icon" width="22" height="22">
+          <use href="./images/icons/symbol-defs.svg#icon-close-menu"></use>
+        </svg>
+      </button>
+
+    </div>
 </header>

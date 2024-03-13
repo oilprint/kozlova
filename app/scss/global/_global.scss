@@ -155,6 +155,10 @@ main {
       margin-bottom: 16px;
     }
 
+    @media (max-width: 480px) {
+      font-size: 32px;
+    }
+
     &--small {
       margin-bottom: 20px;
     }
@@ -294,5 +298,64 @@ main {
       width: 100px;
       height: 14px;
     }
+  }
+}
+
+.social {
+  display: flex;
+  flex-direction: column;
+
+  &__link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: $light;
+    font-size: 28px;
+    line-height: 1;
+    font-weight: 500;
+    transition: color 0.3s ease-in-out,
+      outline 0.3s ease-in-out;
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      left: 0;
+      bottom: 0;
+      background-color: $accent;
+      transform-origin: right;
+      transform: scaleX(0);
+      transition: transform 0.4s ease-in-out;
+    }
+
+    &:focus {
+      outline: solid 1px $accent;
+      outline-offset: 4px;
+      border-radius: 4px;
+    }
+
+    &:hover {
+      &::before {
+        transform: scaleX(1);
+        transform-origin: left;
+      }
+
+      .social__icon {
+        fill: $accent;
+      }
+    }
+
+    &:active {
+      color: $grey;
+    }
+  }
+
+  &__icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    fill: $light;
+    transition: fill 0.3s ease;
   }
 }

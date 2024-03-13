@@ -35,6 +35,10 @@
     @media (max-width: 1440px) {
       font-size: calc(52px + (140 - 52) * ((100vw - 375px) / (1440 - 375)));
     }
+
+    @media (max-width: 480px) {
+      margin-bottom: -4px;
+    }
   }
 
   &__title {
@@ -44,7 +48,7 @@
     text-transform: uppercase;
     margin-bottom: 8px;
 
-    @media (max-width: 1200px) {
+    @media (max-width: 1440px) {
       font-size: calc(52px + (210 - 52) * ((100vw - 375px) / (1440 - 375)));
     }
   }
@@ -56,10 +60,13 @@
     justify-content: space-between;
     gap: 30px;
 
-
     @media (max-width: 1200px) {
       flex-wrap: wrap;
       gap: 16px;
+    }
+
+    @media (max-width: 768px) {
+      gap: 20px;
     }
   }
 
@@ -73,7 +80,6 @@
     @media (max-width: 1440px) {
       font-size: calc(52px + (140 - 52) * ((100vw - 375px) / (1440 - 375)));
     }
-
   }
 
   &__text {

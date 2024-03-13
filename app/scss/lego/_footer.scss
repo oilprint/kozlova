@@ -3,41 +3,36 @@
   background-color: $dark;
   border-radius: 40px 40px 0 0;
   text-align: center;
-  position: relative;
 
-  &::before {
-    position: absolute;
-    z-index: 0;
-    display: inline-block;
-    content: "kozlova.ux";
-    bottom: 0;
-    left: 0;
-    right: 0;
-    text-align: center;
-    font-family: "Archivo",
-      sans-serif;
-    font-weight: 700;
-    font-size: 248px;
-    line-height: 1;
-    color: #3a3c3d;
+  @media (max-width: 1024px) {
+    padding: 100px 0 30px;
   }
 
-  @media (max-width: 1440px) {
-    &::before {
-      font-size: calc(62px + (248 - 62) * ((100vw - 375px) / (1440 - 375)));
-    }
+  @media (max-width: 768px) {
+    padding: 90px 0 30px;
   }
+
+  @media (max-width: 480px) {
+    padding: 70px 0 30px;
+  }
+
 
   &__wrapper {
     position: relative;
     z-index: 3;
   }
 
-
   &__top {
     display: flex;
     justify-content: space-between;
+    gap: 50px;
+    flex-wrap: wrap;
     margin-bottom: 80px;
+
+    @media (max-width: 480px) {
+      gap: 30px;
+      margin-bottom: 50px;
+    }
   }
 
   &__contact {
@@ -51,6 +46,7 @@
     text-transform: uppercase;
     font-weight: 700;
     line-height: 1;
+    margin-bottom: 8px;
   }
 
   &__link {
@@ -61,11 +57,13 @@
     font-size: 56px;
     line-height: 1;
 
-    // &--small {
-    //   font-size: 20px;
-    //   opacity: 0.7;
-    //   color: $grey
-    // }
+    @media (max-width: 1024px) {
+      font-size: 40px;
+    }
+
+    @media (max-width: 480px) {
+      font-size: calc(30px + (38 - 30) * ((100vw - 375px) / (480 - 375)));
+    }
 
     &:focus {
       outline: solid 1px $accent;
@@ -83,63 +81,7 @@
   }
 
   &__social {
-    display: flex;
-    flex-direction: column;
     gap: 10px;
-  }
-
-  &__social-link {
-    position: relative;
-    display: flex;
-    align-items: center;
-    color: $light;
-    font-size: 28px;
-    line-height: 1;
-    font-weight: 500;
-    transition: color 0.3s ease-in-out,
-      outline 0.3s ease-in-out;
-
-    &:before {
-      content: '';
-      position: absolute;
-      width: 100%;
-      height: 2px;
-      left: 0;
-      bottom: 0;
-      background-color: $accent;
-      transform-origin: right;
-      transform: scaleX(0);
-      transition: transform 0.4s ease-in-out;
-    }
-
-    &:focus {
-      outline: solid 1px $accent;
-      outline-offset: 4px;
-      border-radius: 4px;
-    }
-
-    &:hover {
-      &::before {
-        transform: scaleX(1);
-        transform-origin: left;
-      }
-
-      .footer__social-icon {
-        fill: $accent;
-      }
-    }
-
-    &:active {
-      color: $grey;
-    }
-  }
-
-  &__social-icon {
-    width: 24px;
-    height: 24px;
-    margin-right: 10px;
-    fill: $light;
-    transition: fill 0.3s ease;
   }
 
   &__logo {
@@ -149,12 +91,50 @@
   }
 
   &__bottom {
+    position: relative;
+    z-index: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 60px;
     font-size: 20px;
     opacity: 0.7;
-    color: $grey
+    color: $grey;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      z-index: -1;
+      display: inline-block;
+      content: "kozlova.ux";
+      bottom: 10px;
+      left: 0;
+      right: 0;
+      text-align: center;
+      font-family: "Archivo",
+        sans-serif;
+      font-weight: 700;
+      font-size: 248px;
+      line-height: 1;
+      color: #3a3c3d;
+    }
+
+    @media (max-width: 1440px) {
+      &::before {
+        font-size: calc(62px + (248 - 62) * ((100vw - 375px) / (1440 - 375)));
+      }
+    }
+
+    @media (max-width: 10240px) {
+      &::before {
+        bottom: 20px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      &::before {
+        bottom: 50px;
+      }
+    }
   }
 }

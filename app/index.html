@@ -21,13 +21,22 @@
 </head>
 
 <body>
-  <header class="header">
+  <div class="wrapper">
+    <header class="header">
   <div class="container">
     <nav class="header__nav">
       <a href="#" class="logo header__logo">
         <img class="logo__img" src="./images/icons/logo.svg" alt="Designer Developer Iryna Kozlova" width="150"
           height="30">
       </a>
+
+      <button class="header__mobile-btn mobile-btn" type="button">
+        <span class=" sr-only">Open menu</span>
+        <svg class="mobile-btn__icon" width="44" height="44">
+          <use href="./images/icons/symbol-defs.svg#icon-open-menu"></use>
+        </svg>
+      </button>
+
       <ul class="header__list">
         <li class="header__item">
           <a href="#" class="header__item-link">Work</a>
@@ -37,11 +46,61 @@
         </li>
       </ul>
     </nav>
-  </div>
+
+    <div class="mobile-menu">
+      <div class="mobile-menu__menu">
+        <ul class="mobile-menu__list">
+          <li class="mobile-menu__item">
+            <a class="mobile-menu__link " href="#">
+              Work
+            </a>
+          </li>
+          <li class="mobile-menu__item">
+            <a class="mobile-menu__link @@works" href="#">
+              Contact
+            </a>
+          </li>
+        </ul>
+        <a class="mobile-menu__contact-link" href="mailto:kozlova.ux@gmail.com">
+          kozlova.ux@gmail.com
+        </a>
+        <ul class="mobile-menu__social">
+          <li class="mobile-menu__social-item">
+            <a href="#" class="mobile-menu__social-link">
+              <svg class="mobile-menu__social-icon" width="20" height="20">
+                <use href="./images/icons/symbol-defs.svg#icon-linkedin"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="mobile-menu__social-item">
+            <a href="#" class="mobile-menu__social-link">
+              <svg class="mobile-menu__social-icon" width="20" height="20">
+                <use href="./images/icons/symbol-defs.svg#icon-github-btn"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="mobile-menu__social-item">
+            <a href="#" class="mobile-menu__social-link">
+              <svg class="mobile-menu__social-icon" width="20" height="20">
+                <use href="./images/icons/symbol-defs.svg#icon-instagram"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <button class="mobile-menu__button mobile-btn mobile-btn--close" type="button">
+        <span class=" sr-only">Close menu</span>
+        <svg class="mobile-btn__icon" width="22" height="22">
+          <use href="./images/icons/symbol-defs.svg#icon-close-menu"></use>
+        </svg>
+      </button>
+
+    </div>
 </header>
 
-  <main>
-    <section class="hero">
+    <main>
+      <section class="hero">
   <div class="container">
     <div class="hero__inner">
       <span class="hero__headline">
@@ -68,7 +127,7 @@
     </div>
   </div>
 </section>
-    <section class="about section">
+      <section class="about section">
   <div class="container">
     <div class="about__inner">
       <div class="about__img-box">
@@ -135,7 +194,7 @@
 
   </div>
 </section>
-    <section class="section work">
+      <section class="section work">
   <div class="container">
     <div class="title">
       <p class="title__text">
@@ -454,7 +513,7 @@
     </div>
   </div>
 </section>
-    <section class="decor">
+      <section class="decor">
 
   <div class="container">
     <p class="decor__text">
@@ -464,7 +523,7 @@
     </p>
   </div>
 </section>
-    <section class="section serv">
+      <section class="section serv">
 
   <div class="container">
     <div class="serv__wrapper">
@@ -521,7 +580,7 @@
     </div>
   </div>
 </section>
-    <section class="section react">
+      <section class="section react">
   <div class="container">
     <div class="react__wrapper">
       <div class="title react__title">
@@ -645,9 +704,9 @@
     </div>
   </div>
 </section>
-  </main>
+    </main>
 
-  <footer class="footer">
+    <footer class="footer">
   <div class="container">
     <div class="footer__wrapper">
       <div class="footer__top">
@@ -660,18 +719,26 @@
             kozlova.ux@gmail.com
           </a>
         </div>
-        <ul class="footer__social">
-          <li class="footer__social-item">
-            <a href="#" class="footer__social-link">
-              <svg class="footer__social-icon" width="20" height="20">
+        <ul class="footer__social social">
+          <li class="social__item">
+            <a href="#" class="social__link">
+              <svg class="social__icon" width="20" height="20">
                 <use href="./images/icons/symbol-defs.svg#icon-linkedin"></use>
               </svg>
               Linkedin
             </a>
           </li>
-          <li class="footer__social-item">
-            <a href="#" class="footer__social-link">
-              <svg class="footer__social-icon" width="20" height="20">
+          <li class="social__item">
+            <a href="#" class="social__link">
+              <svg class="social__icon" width="20" height="20">
+                <use href="./images/icons/symbol-defs.svg#icon-github-btn"></use>
+              </svg>
+              Github
+            </a>
+          </li>
+          <li class="social__item">
+            <a href="#" class="social__link">
+              <svg class="social__icon" width="20" height="20">
                 <use href="./images/icons/symbol-defs.svg#icon-instagram"></use>
               </svg>
               Instagram
@@ -683,19 +750,19 @@
         <img class="logo__img" src="./images/icons/logo-white.svg" alt="Designer Developer Iryna Kozlova" width="220"
           height="43">
       </a>
-      <div class="footer__bottom">
-        <p class="footer__bottom-text">
-          © 2024
-        </p>
-        <a class="footer__bottom-link" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=kozlova.ux@gmail.com"
-          target="_blank">
-          created by kozlova.ux
-        </a>
-      </div>
-
     </div>
 
+    <div class="footer__bottom">
+      <p class="footer__bottom-text">
+        © 2024
+      </p>
+      <a class="footer__bottom-link" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=kozlova.ux@gmail.com"
+        target="_blank">
+        Code by kozlova.ux
+      </a>
+    </div>
 </footer>
+  </div>
 
   <script src="https://unpkg.com/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>

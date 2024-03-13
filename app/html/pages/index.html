@@ -15,20 +15,22 @@
 </head>
 
 <body>
-  @@include('../components/header.html', {
-  "home": "current"
-  })
+  <div class="wrapper">
+    @@include('../components/header.html', {
+    "home": "current"
+    })
 
-  <main>
-    @@include('../components/hero.html')
-    @@include('../components/about.html')
-    @@include('../components/work.html')
-    @@include('../components/decor.html')
-    @@include('../components/services.html')
-    @@include('../components/react-app.html')
-  </main>
+    <main>
+      @@include('../components/hero.html')
+      @@include('../components/about.html')
+      @@include('../components/work.html')
+      @@include('../components/decor.html')
+      @@include('../components/services.html')
+      @@include('../components/react-app.html')
+    </main>
 
-  @@include('../components/footer.html')
+    @@include('../components/footer.html')
+  </div>
 
   <script src="https://unpkg.com/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
