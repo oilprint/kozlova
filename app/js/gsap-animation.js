@@ -23,6 +23,53 @@ gsap.registerPlugin(ScrollTrigger);
 		lenis.raf(time * 1000)
 	})
 
+
+//text
+
+const tl=gsap.timeline();
+
+function textAnimation() {
+  tl.from('.hero__title', 1, {
+    opacity:0,
+    y: 40,
+    ease: 'power4.inOut'
+  })
+  .from('.hero__subtitle', 1, {
+    opacity:0,
+    y: 40,
+    ease: 'power4.inOut'
+  })
+}
+textAnimation() 
+
+const splitTypes = document.querySelectorAll('.reveal-type');
+
+splitTypes.forEach((char,i) => {
+  const text = new SplitType(char, { types: 'chars'})
+
+  gsap.from(text.chars, {
+    scrollTrigger: {
+      trigger: char, 
+      start: 'top 80%',
+      end: 'top 20%',
+      scrub: true
+    }, 
+    css: {
+      color: '#363839',
+    },
+    
+    stagger: 0.1
+  })
+
+})
+
+
+
+
+///end text
+
+
+
 // scrollPortfolio
 
 let workInfoItems = document.querySelectorAll('.work__photo-item');
@@ -53,6 +100,95 @@ ScrollTrigger.create({
 })
 
 /////end scrollPortfolio
+
+//parallax start
+
+function scrollTrig() {
+		let gsapAnim = gsap.utils.toArray('.gsap__anim');
+		gsapAnim.forEach(section => {
+			gsap.to(section, {
+				scrollTrigger: {
+					trigger: section,
+					start: 'bottom bottom',
+					end: 'bottom top',
+					scrub: true,
+					snap: true
+				},
+				yPercent: 100,
+				ease: 'none'
+			});
+		});
+
+    gsap.to('.react-app', {
+				scrollTrigger: {
+					trigger: '.serv',
+					start: 'bottom bottom',
+					end: 'bottom top',
+					scrub: true,
+					snap: true
+				},
+				yPercent: 100,
+				
+			});
+	
+		// gsap.to('.title__t', {
+		// 	scrollTrigger: {
+		// 		trigger: '.serv',
+		// 		start: 'top top ',
+		// 		end: 'bottom top',
+		// 		scrub: true
+		// 	},
+		// 	xPercent: 20,
+		// 	ease: 'none'
+		// });
+
+    gsap.to('.title__w', {
+			scrollTrigger: {
+				trigger: '.work',
+				start: 'top center',
+				end: 'bottom top',
+				scrub: true
+			},
+			xPercent: 20,
+			ease: 'none'
+		});
+
+    gsap.to('.title__r', {
+			scrollTrigger: {
+				trigger: '.react',
+				start: 'top 30%',
+				end: 'bottom top',
+				scrub: true
+			},
+			xPercent: 20,
+			ease: 'none'
+		});
+
+		gsap.to('.serv__item:nth-child(1)', {
+			scrollTrigger: {
+				trigger: '.serv',
+				start: 'top top',
+				end: 'bottom top',
+				scrub: true
+			},
+			xPercent: -20,
+			ease: 'none'
+		});
+
+		gsap.to('.serv__item:nth-child(3)', {
+			scrollTrigger: {
+				trigger: '.serv',
+				start: 'top top',
+				end: 'bottom top',
+				scrub: true
+			},
+			xPercent: 20,
+			ease: 'none'
+		});
+  }
+
+  scrollTrig();
+////
 
 //resize window
 	const debouncedResize = _.debounce(onWindowResize, 500);

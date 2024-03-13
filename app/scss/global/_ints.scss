@@ -82,11 +82,11 @@
     }
 
     &::after {
-      background-color: $dark;
+      background-color: $dark-grey;
     }
 
     &:hover {
-      color: $accent;
+      color: $light;
     }
 
     &:active {
