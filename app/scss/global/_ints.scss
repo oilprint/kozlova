@@ -1,12 +1,59 @@
 .logo {
   display: inline-block;
+  transition: transform 0.4s ease-in-out;
 
   &:focus {
     outline: solid 1px $accent;
     outline-offset: 2px;
     border-radius: 4px;
   }
+
+  &:hover {
+    transform: scale(1.1);
+
+    .logo__icon {
+      fill: $accent;
+    }
+  }
+
+  &:active {
+    transform: scale(1);
+
+    .logo__icon {
+      fill: #525759;
+      ;
+    }
+
+    .logo__icon--white {
+      fill: $light;
+
+    }
+  }
+
+  &__icon {
+    width: 150px;
+    height: 30px;
+    fill: #525759;
+    transition: fill 0.4s ease-in-out;
+  }
+
+  &--white {
+    .logo__icon {
+      width: 220px;
+      height: 43px;
+      fill: $light;
+      transition: fill 0.4s ease-in-out;
+    }
+
+    &:active {
+      .logo__icon {
+        fill: $light;
+      }
+    }
+  }
 }
+
+
 
 .button {
   position: relative;

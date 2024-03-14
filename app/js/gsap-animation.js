@@ -31,14 +31,20 @@ const tl=gsap.timeline();
 function textAnimation() {
   tl.from('.hero__title', 1, {
     opacity:0,
+    scaleY: 0.6,
+    skew: '135deg, 15deg',
     y: 40,
     ease: 'power4.inOut'
   })
   .from('.hero__subtitle', 1, {
     opacity:0,
+    scaleY: 0.6,
+    skew: '135deg, 15deg',
     y: 40,
     ease: 'power4.inOut'
-  })
+  },
+  0.3
+  )
 }
 textAnimation() 
 
