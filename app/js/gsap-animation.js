@@ -68,12 +68,22 @@ splitTypes.forEach((char,i) => {
   })
 
 })
-
-
-
-
 ///end text
 
+//skills animation
+gsap.to('.about .skills__item', {
+    scrollTrigger: {
+      trigger: '.about', 
+      start: 'center 80%',
+      end: 'bottom top',
+      scrub: true
+    }, 
+    css: {
+       filter: "saturate(100%)"
+    },
+    
+    stagger: 0.1
+  })
 
 
 // scrollPortfolio

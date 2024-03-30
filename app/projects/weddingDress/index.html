@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patricia Wedding | Home Page</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
+    rel="stylesheet">
+
+     <link rel="icon" href="favicon/favicon.ico" sizes="any">
+     <link rel="icon" href="favicon/favicon.svg" type="image/svg+xml">
+     <link rel="apple-touch-icon" href="favicon/afavicon/pple-touch-icon.png/">
+
+
+  <link rel="stylesheet" href="css/index.min.css">
+</head>
+
+<body>
+
+  <header class="header">
+  <div class="container">
+    <div class="header__top">
+
+      <div class="language header__language">
+        <button class="language__button" type="button" data-value="en">
+          En
+        </button>
+
+        <ul class="language__list">
+          <li class="language__item">
+            <a class="language__link active" href="#">
+              En
+            </a>
+            <a class="language__link" href="#">
+              Uk
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+      <button class="burger header__burger" data-modal-button="mobile">
+        <svg class="burger__icon" width="32" height="32">
+          <use href="./images/symbol-defs.svg#icon-burger"></use>
+        </svg>
+      </button>
+
+      <div id="mobile" class="backdrop hidden" data-modal>
+        <div class="modal modal--mobile">
+          <div class="mobile-menu">
+            <div class="mobile-menu__top">
+              <div class="language mobile-menu__language">
+                <button class="language__button" type="button" data-value="en">
+                  En
+                </button>
+
+                <ul class="language__list">
+                  <li class="language__item">
+                    <a class="language__link active" href="#">
+                      En
+                    </a>
+                    <a class="language__link" href="#">
+                      Uk
+                    </a>
+                  </li>
+
+                </ul>
+
+              </div>
+              <ul class="usernav">
+                <li class="usernav__item">
+                  <a class="icon-button" href="#">
+                    <span class="sr-only">
+                      Your account page
+                    </span>
+                    <svg class="icon-button__icon" width="28" height="28">
+                      <use href="./images/symbol-defs.svg#icon-account"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="usernav__item">
+                  <a class="icon-button" href="#">
+                    <span class="sr-only">
+                      Wishlist
+                    </span>
+                    <svg class="icon-button__icon" width="28" height="28">
+                      <use href="./images/symbol-defs.svg#icon-wishlist">
+                      </use>
+                    </svg>
+                    <span class="usernav__number">
+                      10
+                    </span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <ul class="mobile-menu__list">
+              <li class="mobile-menu__item">
+                <a class="mobile-menu__link current" href="index.html">
+                  Home
+                </a>
+              </li>
+              <li class="mobile-menu__item">
+                <a class="mobile-menu__link @@dresses" href="catalog.html">
+                  Dresses
+                </a>
+              </li>
+              <li class="mobile-menu__item">
+                <a class="mobile-menu__link" href="#">
+                  Wedding party
+                </a>
+              </li>
+              <li class="mobile-menu__item">
+                <a class="mobile-menu__link" href="#">
+                  Accessories
+                </a>
+              </li>
+              <li class="mobile-menu__item">
+                <a class="mobile-menu__link @@gallery" href="gallery.html">
+                  Gallery
+                </a>
+              </li>
+              <li class="mobile-menu__item">
+                <a class="mobile-menu__link @@contact" href="contact.html">
+                  Contact us
+                </a>
+              </li>
+            </ul>
+            <form class="mobile-menu__form form" action="#">
+              <label class="sr-only" for="search">Search</label>
+              <input class="form__input" type="text" name="search" placeholder="Search">
+              <button class="icon-button form__btn">
+                <svg class="icon-button__icon" width="28" height="28">
+                  <use href="./images/symbol-defs.svg#icon-search"></use>
+                </svg>
+              </button>
+            </form>
+          </div>
+          <button class="close-btn modal__btn modal__btn--mobile" type="button" data-modal-close>
+            <svg class="close-btn__icon" width="32" height="32">
+              <use href="images/symbol-defs.svg#icon-close">
+              </use>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <a class="logo header__logo" href="index.html">
+        <img class="logo__img" src="images/logo.svg" alt="Patriia Wedding Logo" width="320" height="80">
+      </a>
+      <ul class="usernav header__usernav">
+        <li class="usernav__item">
+          <a class="icon-button" href="#">
+            <span class="sr-only">
+              Your account page
+            </span>
+            <svg class="icon-button__icon" width="28" height="28">
+              <use href="./images/symbol-defs.svg#icon-account"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="usernav__item">
+          <a class="icon-button" href="#">
+            <span class="sr-only">
+              Wishlist
+            </span>
+            <svg class="icon-button__icon" width="28" height="28">
+              <use href="./images/symbol-defs.svg#icon-wishlist">
+              </use>
+            </svg>
+            <span class="usernav__number">
+              10
+            </span>
+          </a>
+        </li>
+        <li class="usernav__item">
+          <button class="icon-button" type="button" data-modal-button="shopping-modal">
+            <span class="sr-only">
+              shopping bag
+            </span>
+            <svg class="icon-button__icon" width="28" height="28">
+              <use href="./images/symbol-defs.svg#icon-bag"></use>
+            </svg>
+            <span class="usernav__number">
+              2
+            </span>
+          </button>
+
+          <div id="shopping-modal" class="backdrop hidden" data-modal>
+            <div class="modal modal--shopping">
+              <div class="shopping-modal">
+                <h2 class="shopping-modal__title">
+                  Shopping bag (
+                  <span class="shopping-modal__quantity">
+                    2
+                  </span>
+                  )
+                </h2>
+                <ul class="shopping-modal__list">
+                  <li class="shopping-modal__item">
+                    <article class="shopping-card modal__shopping-card">
+                      <img class="shopping-card__img" src="images/product/catalog/dress-02.jpg"
+                        alt="Wedding dress Calliope" width="100" height="150">
+                      <div class="shopping-card__content">
+                        <h3 class="shopping-card__headline">
+                          Calliope
+                        </h3>
+                        <ul class="shopping-card__info">
+                          <li class="shopping-card__info-item">
+                            Color:
+                            <span class="shopping-card__value">
+                              White
+                            </span>
+                          </li>
+                          <li class="shopping-card__info-item">
+                            Size:
+                            <span class="shopping-card__value">
+                              M
+                            </span>
+                          </li>
+                        </ul>
+                        <div class="shopping-card__links">
+                          <a href="product-one.html" class="shopping-card__btn shopping-card__btn--border">
+                            Edit
+                          </a>
+                          <button class="shopping-card__btn" type="button">
+                            Remove
+                          </button>
+                        </div>
+                      </div>
+                      <div class="shopping-card__price">
+                        <span class="shopping-card__price-current">
+                          <span class="currency">
+                            $
+                          </span>
+                          900.00
+                        </span>
+                        <span class="shopping-card__price-old">
+                          <span class="currency">
+                            $
+                          </span>
+                          900.00
+                        </span>
+                      </div>
+                    </article>
+                  </li>
+                  <li class="shopping-modal__item">
+                    <article class="shopping-card modal__shopping-card">
+                      <img class="shopping-card__img" src="images/product/accessories/nicola.jpg"
+                        alt="Wedding accessories nicola" width="100" height="150">
+                      <div class="shopping-card__content">
+                        <h3 class="shopping-card__headline">
+                          Nicola Bathie Perry
+                        </h3>
+                        <ul class="shopping-card__info">
+                          <li class="shopping-card__info-item">
+                            Color:
+                            <span class="shopping-card__value">
+                              White
+                            </span>
+                          </li>
+                          <li class="shopping-card__info-item">
+                            Size:
+                            <span class="shopping-card__value">
+                              M
+                            </span>
+                          </li>
+                        </ul>
+                        <div class="shopping-card__links">
+                          <a href="product-one.html" class="shopping-card__btn shopping-card__btn--border">
+                            Edit
+                          </a>
+                          <button class="shopping-card__btn" type="button">
+                            Remove
+                          </button>
+                        </div>
+                      </div>
+                      <div class="shopping-card__price">
+                        <span class="shopping-card__price-current">
+                          <span class="currency">
+                            $
+                          </span>
+                          25.00
+                        </span>
+                        <span class="shopping-card__price-old">
+                          <span class="currency">
+                            $
+                          </span>
+                          30.00
+                        </span>
+                      </div>
+                    </article>
+                  </li>
+
+                </ul>
+                <div class="shopping-modal__sum">
+                  <p class="shopping-modal__subtitle">
+                    TOTAL:
+                  </p>
+                  <span class="shopping-modal__price">
+                    <span class="curency">
+                      $
+                    </span>
+                    1,225.00
+                  </span>
+                </div>
+                <a class="button shopping-modal__button" href="shopping-bag.html">
+                  Proceed to checkout
+                </a>
+                <button class="shopping-modal__link link" data-modal-close>
+                  Keep shopping
+                </button>
+              </div>
+              <button class="modal__btn close-btn" type="button" data-modal-close>
+                <svg class="close-btn__icon" width="24" height="24">
+                  <use href="images/symbol-defs.svg#icon-close">
+                  </use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="header__bottom">
+      <nav class="header__menu">
+        <ul class="header__list">
+          <li class="header__item">
+            <a class="header__link current" href="index.html">
+              Home
+            </a>
+          </li>
+          <li class="header__item">
+            <a class="header__link @@dresses" href="catalog.html">
+              Dresses
+            </a>
+          </li>
+          <li class="header__item">
+            <a class="header__link" href="catalog.html">
+              Bridesmaid
+            </a>
+          </li>
+          <li class="header__item">
+            <a class="header__link" href="catalog.html">
+              Accessories
+            </a>
+          </li>
+          <li class="header__item">
+            <a class="header__link @@gallery" href="gallery.html">
+              Gallery
+            </a>
+          </li>
+          <li class="header__item">
+            <a class="header__link @@contact" href="contact.html">
+              Contact us
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <form class="header__form form" action="#">
+        <label class="sr-only" for="search">Search</label>
+        <input class="form__input header__input " type="text" name="search" id="search" placeholder="Search">
+        <button class="icon-button form__btn">
+          <svg class="icon-button__icon" width="20" height="20">
+            <use href="./images/symbol-defs.svg#icon-search"></use>
+          </svg>
+        </button>
+      </form>
+
+      <button class="icon-button header__btn" type="button">
+        <span class="sr-only">
+          Search
+        </span>
+        <svg class="icon-button__icon" width="28" height="28">
+          <use href="./images/symbol-defs.svg#icon-search"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+  <main>
+    <div class="wrapper">
+      <section class="hero">
+        <div class="hero__inner">
+        </div>
+        <div class="container">
+          <div class="hero__content">
+            <h1 class="title hero__title">
+              Wedding dresses to fall in love
+            </h1>
+            <p class="hero__text">
+              Every bridesmaid has her dream dress
+            </p>
+            <a class="button hero__button" href="catalog.html">
+              Shop now
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="collection section section--small">
+        <div class="container ">
+          <h2 class="title collection__title" data-aos="fade-right">
+            The wilderly bride collection
+          </h2>
+          <div class="collection__inner">
+            <div class="collection__inner-left">
+              <div class="collection__content">
+                <p class="subtitle collection__subtitle" data-aos="fade-right">
+                  Explore our Dresses
+                </p>
+                <div class="collection__info">
+                  <p class="collection__txt" data-aos="fade-right" data-aos-delay="50">
+                    Dreamed up for the bride who's searching for fluttering silhouettes and unique, delicate detailing.
+                    Thoughtfully curated to embody a sense of carefree elegance and uniqueness
+                  </p>
+                </div>
+                <a class="button button--light" href="catalog.html">
+                  View all dresses
+                </a>
+              </div>
+              <ul class="collection__photo">
+                <li class="collection__photo-item">
+
+                  <picture>
+                    <source srcset="./images/decor/collection/col-1-mobile.webp 1x,
+                        ./images/decor/collection/col-1-mobile@2x.webp 2x" type="image/webp"
+                      media="(max-width: 576px)">
+                    <source srcset="./images/decor/collection/col-1-mobile.jpg 1x,
+                        ./images/decor/collection/col-1-mobile@2x.jpg 2x" media="(max-width: 576px)">
+
+                    <source
+                      srcset="./images/decor/collection/col-1-tab.webp 1x, ./images/decor/collection/col-1-tab@2x.webp 2x"
+                      type="image/webp" media="(max-width: 1024px)">
+                    <source
+                      srcset="./images/decor/collection/col-1-tab.jpg 1x, ./images/decor/collection/col-1-tab@2x.jpg 2x"
+                      media="(max-width: 1024px)">
+
+                    <source
+                      srcset="./images/decor/collection/col-1-desktop.webp 1x, ./images/decor/collection/col-1-desktop@2x.webp 2x"
+                      type="image/webp">
+                    <source srcset="./images/decor/collection/col-1-desktop.jpg 1x,
+                       ./images/decor/collection/col-1-desktop@2x.jpg
+                       2x">
+
+                    <img class="collection__photo-img" src="./images/decor/collection/col-1-desktop.jpg"
+                      alt="The wilderly bride collection" width="340" height="470">
+                  </picture>
+                </li>
+
+                <li class="collection__photo-item">
+                  <picture>
+                    <source srcset="./images/decor/collection/col-2-mobile.webp 1x,
+                        ./images/decor/collection/col-2-mobile@2x.webp 2x" type="image/webp"
+                      media="(max-width: 576px)">
+                    <source srcset="./images/decor/collection/col-2-mobile.jpg 1x,
+                        ./images/decor/collection/col-2-mobile@2x.jpg 2x" media="(max-width: 576px)">
+
+                    <source
+                      srcset="./images/decor/collection/col-2-tab.webp 1x, ./images/decor/collection/col-2-tab@2x.webp 2x"
+                      type="image/webp" media="(max-width: 1024px)">
+                    <source
+                      srcset="./images/decor/collection/col-2-tab.jpg 1x, ./images/decor/collection/col-2-tab@2x.jpg 2x"
+                      media="(max-width: 1024px)">
+
+                    <source
+                      srcset="./images/decor/collection/col-2-desktop.webp 1x, ./images/decor/collection/col-2-desktop@2x.webp 2x"
+                      type="image/webp">
+                    <source srcset="./images/decor/collection/col-2-desktop.jpg 1x,
+                       ./images/decor/collection/col-2-desktop@2x.jpg
+                       2x">
+
+                    <img class="collection__photo-img" src="./images/decor/collection/col-2-desktop.jpg"
+                      alt="The wilderly bride collection" width="300" height="520">
+                  </picture>
+                </li>
+              </ul>
+            </div>
+
+            <div class="collection__inner-right">
+              <picture>
+                <source
+                  srcset="./images/decor/collection/col-3-tab.webp 1x, ./images/decor/collection/col-3-tab@2x.webp 2x"
+                  type="image/webp" media="(max-width: 1024px)">
+                <source
+                  srcset="./images/decor/collection/col-3-tab.jpg 1x, ./images/decor/collection/col-3-tab@2x.jpg 2x"
+                  media="(max-width: 1024px)">
+
+                <source
+                  srcset="./images/decor/collection/col-3-desktop.webp 1x, ./images/decor/collection/col-3-desktop@2x.webp 2x"
+                  type="image/webp">
+                <source srcset="./images/decor/collection/col-3-desktop.jpg 1x,
+                       ./images/decor/collection/col-3-desktop@2x.jpg
+                       2x">
+
+                <img class="collection__right-img" src="./images/decor/collection/col-3-desktop.jpg"
+                  alt="The wilderly bride collection" width="470" height="780">
+              </picture>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="collection section section--big">
+        <div class="container ">
+          <h2 class="title collection__title" data-aos="fade-right">
+            Bridesmaids dresses
+          </h2>
+          <div class="collection__inner">
+            <div class="collection__inner-left">
+              <div class="collection__content">
+                <p class="subtitle collection__subtitle" data-aos="fade-right">
+                  Affordable Dresses
+                </p>
+                <div class="collection__info">
+                  <p class="collection__txt" data-aos="fade-right" data-aos-delay="50">
+                    Bridesmaid dresses are one of the most exciting aspects of any wedding.
+                  </p>
+                  <p class="collection__txt" data-aos="fade-right" data-aos-delay="50">
+                    Kitting out your bridal party in the right dress has the potential to enhance your own Wedding
+                    Dress,
+                    as
+                    well as deepening the impact of your wedding theme.
+                  </p>
+                </div>
+                <a class="button button--light" href="catalog.html">
+                  View all dresses
+                </a>
+              </div>
+              <div class="collection__photo">
+
+                <picture>
+                  <source srcset="./images/decor/bride/bride-1-mobile.webp 1x,
+                        ./images/decor/bride/bride-1-mobile@2x.webp 2x" type="image/webp" media="(max-width: 576px)">
+                  <source srcset="./images/decor/bride/bride-1-mobile.jpg 1x,
+                        ./images/decor/bride/bride-1-mobile@2x.jpg 2x" media="(max-width: 576px)">
+
+                  <source srcset="./images/decor/bride/bride-1-desktop.webp 1x,
+                    ./images/decor/bride/bride-1-desktop@2x.webp 2x" type="image/webp">
+                  <source srcset="./images/decor/bride/bride-1-desktop.jpg 1x,
+                       ./images/decor/bride/bride-1-desktop@2x.jpg
+                       2x">
+
+                  <img class="collection__photo-img" src="./images/decor/bride/bride-1-desktop.jpg"
+                    alt="The wilderly bride collection" width="570" height="420">
+                </picture>
+              </div>
+            </div>
+
+            <div class="collection__inner-right collection__inner-right--big">
+
+              <picture>
+                <source
+                  srcset="./images/decor/bride/bride-2-mobile.webp 1x, ./images/decor/bride/bride-2-mobile@2x.webp 2x"
+                  type="image/webp" media="(max-width: 576px)">
+                <source
+                  srcset="./images/decor/bride/bride-2-mobile.jpg 1x, ./images/decor/bride/bride-2-mobile@2x.jpg 2x"
+                  media="(max-width: 576px)">
+
+                <source srcset="./images/decor/bride/bride-2-desktop.webp 1x,
+                    ./images/decor/bride/bride-2-desktop@2x.webp 2x" type="image/webp">
+                <source srcset="./images/decor/bride/bride-2-desktop.jpg 1x,
+                       ./images/decor/bride/bride-2-desktop@2x.jpg
+                       2x">
+
+                <img class="collection__right-img" src="./images/decor/bride/bride-2-desktop.jpg"
+                  alt="The wilderly bride collection" width="570" height="820">
+              </picture>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="accessories section section--big">
+        <div class="container">
+          <h2 class="title accessories__title" data-aos="fade-right">
+            Wedding hair accessories
+          </h2>
+          <div class="accessories__inner">
+            <div class="accessories__content">
+              <ul class="accessories__top">
+                <li class="accessories__img-box">
+                  <picture>
+
+                    <source srcset="./images/decor/accessory/acc-1-tab.webp 1x,
+                      ./images/decor/accessory/acc-1-tab@2x.webp 2x" type="image/webp" media="(max-width: 1024px)">
+                    <source
+                      srcset="./images/decor/accessory/acc-1-tab.jpg 1x, ./images/decor/accessory/acc-1-tab@2x.jpg 2x"
+                      media="(max-width: 1024px)">
+
+                    <source srcset="./images/decor/accessory/acc-1-desktop.webp 1x,
+                    ./images/decor/accessory/acc-1-desktop@2x.webp 2x" type="image/webp">
+                    <source srcset="./images/decor/accessory/acc-1-desktop.jpg 1x,
+                       ./images/decor/accessory/acc-1-desktop@2x.jpg
+                       2x">
+
+                    <img class="accessories__img" src="./images/decor/accessory/acc-1-desktop.jpg"
+                      alt="hair accessories" width="270" height="460">
+                  </picture>
+                </li>
+
+                <li class="accessories__img-box accessories__img-box--hidden">
+                  <picture>
+                    <source srcset="./images/decor/accessory/acc-2-mobile.webp 1x,
+                      ./images/decor/accessory/acc-2-mobile@2x.webp 2x" type="image/webp" media="(max-width: 576px)">
+                    <source srcset="./images/decor/accessory/acc-2-mobile.jpg 1x, ./images/decor/accessory/acc-2-mobile@2x.jpg
+                      2x" media="(max-width: 576px)">
+
+                    <source srcset="./images/decor/accessory/acc-2-tab.webp 1x,
+                      ./images/decor/accessory/acc-2-tab@2x.webp 2x" type="image/webp" media="(max-width: 1024px)">
+                    <source
+                      srcset="./images/decor/accessory/acc-2-tab.jpg 1x, ./images/decor/accessory/acc-2-tab@2x.jpg 2x"
+                      media="(max-width: 1024px)">
+
+                    <source srcset="./images/decor/accessory/acc-2-desktop.webp 1x,
+                    ./images/decor/accessory/acc-2-desktop@2x.webp 2x" type="image/webp">
+                    <source srcset="./images/decor/accessory/acc-2-desktop.jpg 1x,
+                       ./images/decor/accessory/acc-2-desktop@2x.jpg
+                       2x">
+
+                    <img class="accessories__img" src="./images/decor/accessory/acc-2-desktop.jpg"
+                      alt="hair accessories" width="270" height="460">
+                  </picture>
+                </li>
+              </ul>
+
+              <div class="accessories__content-box">
+                <p class="subtitle accessories__subtitle" data-aos="fade-right">
+                  Time to shine
+                </p>
+                <p class="accessories__txt" data-aos="fade-right" data-aos-delay="50">
+                  Discover wedding hair accessories to complete your dream look. From decadent bridal hair pieces to
+                  simple
+                  pins, our hair accessories for weddings have been handpicked to bring bridal luxury for every taste
+                  and
+                  style.
+                </p>
+
+                <a class="link" href="#" data-aos="fade-right" data-aos-delay="50">
+                  Look more
+                </a>
+              </div>
+            </div>
+            <div class="accessories__img-big">
+
+              <picture>
+                <source srcset="./images/decor/accessory/acc-3-desktop.webp 1x,
+                    ./images/decor/accessory/acc-3-desktop@2x.webp 2x" type="image/webp">
+                <source srcset="./images/decor/accessory/acc-3-desktop.jpg 1x,
+                       ./images/decor/accessory/acc-3-desktop@2x.jpg
+                       2x">
+
+                <img class="accessories__img accessories__img--corner" src="./images/decor/accessory/acc-3-desktop.jpg"
+                  alt="White hair accessories" width="570" height="800">
+              </picture>
+
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <section class="love-story section">
+        <div class="container">
+
+          <h2 class="title love-story__title" data-aos="fade-right">
+            Share with us your love story!
+          </h2>
+
+          <div class="love-story__inner">
+            <div class="love-story__inner-left">
+              <div class="love-story__photo-left">
+                <picture>
+                  <source srcset="./images/love-story/lovestory-1-mobile.webp 1x,
+                        ./images/decor/love-story/lovestory-1-mobile@2x.webp 2x" type="image/webp"
+                    media="(max-width: 576px)">
+                  <source srcset="./images/decor/love-story/lovestory-1-mobile.jpg 1x,
+                        ./images/decor/love-story/lovestory-1-mobile@2x.jpg 2x" media="(max-width: 576px)">
+
+                  <source srcset="./images/decor/love-story/lovestory-1-tab.webp 1x,
+                  ./images/decor/love-story/lovestory-1-tab@2x.webp
+                  2x" type="image/webp" media="(max-width: 1024px)">
+                  <source srcset="./images/decor/love-story/lovestory-1-tab.jpg 1x, ./images/decor/love-story/lovestory-1-tab@2x.jpg
+                  2x" media="(max-width: 1024px)">
+
+                  <source srcset="./images/decor/love-story/lovestory-1-desktop.webp 1x,
+                  ./images/decor/love-story/lovestory-1-desktop@2x.webp 2x" type="image/webp">
+                  <source srcset="./images/decor/love-story/lovestory-1-desktop.jpg 1x,
+                       ./images/decor/love-story/lovestory-1-desktop@2x.jpg
+                       2x">
+
+                  <img class="love-story__img love-story__img--first" src="./images/decorlove-story/lovestory-1-desktop.jpg"
+                    alt="Wedding day" width="570" height="570">
+                </picture>
+              </div>
+              <div class="love-story__photo-left">
+                <picture>
+                  <source srcset="./images/love-story/lovestory-2-mobile.webp 1x,
+                        ./images/decor/love-story/lovestory-2-mobile@2x.webp 2x" type="image/webp"
+                    media="(max-width: 576px)">
+                  <source srcset="./images/decor/love-story/lovestory-2-mobile.jpg 1x,
+                        ./images/decor/love-story/lovestory-2-mobile@2x.jpg 2x" media="(max-width: 576px)">
+
+                  <source srcset="./images/decor/love-story/lovestory-2-tab.webp 1x,
+                  ./images/decor/love-story/lovestory-2-tab@2x.webp
+                  2x" type="image/webp" media="(max-width: 1024px)">
+                  <source srcset="./images/decor/love-story/lovestory-2-tab.jpg 1x, ./images/decor/love-story/lovestory-2-tab@2x.jpg
+                  2x" media="(max-width: 1024px)">
+
+                  <source srcset="./images/decor/love-story/lovestory-2-desktop.webp 1x,
+                  ./images/decor/love-story/lovestory-2-desktop@2x.webp 2x" type="image/webp">
+                  <source srcset="./images/decorlove-story/lovestory-2-desktop.jpg 1x,
+                       ./images/decor/love-story/lovestory-2-desktop@2x.jpg
+                       2x">
+
+                  <img class="love-story__img" src="./images/decorlove-story/lovestory-2-desktop.jpg" alt="Wedding day"
+                    width="570" height="570">
+                </picture>
+              </div>
+            </div>
+
+            <div class="love-story__inner-right">
+              <div class="love-story__content">
+                <p class="subtitle love-story__subtitle" data-aos="fade-right">
+                  Inspired by your
+                  story
+                </p>
+                <p class="love-story__txt" data-aos="fade-right" data-aos-delay="50">
+                  Share your happiest moments with us and other brides by mentioning
+                  <a class="link link--txt" href="#">
+                    @patriciawedding
+                  </a>
+                  on Instagram or adding a photo to
+                  your product review.
+                </p>
+                <a class="love-story__link link" href="gallery.html" data-aos="fade-right" data-aos-delay="50">
+                  Show me more brides
+                </a>
+              </div>
+
+              <div class="love-story__photo-right">
+                <picture>
+
+                  <source srcset="./images/decor/love-story/lovestory-3-tab.webp 1x,
+                  ./images/decor/love-story/lovestory-3-tab@2x.webp
+                  2x" type="image/webp" media="(max-width: 1024px)">
+                  <source srcset="./images/decor/love-story/lovestory-3-tab.jpg 1x, ./images/decor/love-story/lovestory-3-tab@2x.jpg
+                  2x" media="(max-width: 1024px)">
+
+                  <source srcset="./images/decor/love-story/lovestory-3-desktop.webp 1x,
+                  ./images/decor/love-story/lovestory-3-desktop@2x.webp 2x" type="image/webp">
+                  <source srcset="./images/decorlove-story/lovestory-3-desktop.jpg 1x,
+                       ./images/decor/love-story/lovestory-3-desktop@2x.jpg
+                       2x">
+
+                  <img class="love-story__img love-story__img--third" src="./images/decorlove-story/lovestory-3-desktop.jpg"
+                    alt="Wedding day" width="570" height="870">
+                </picture>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="subscribe section section--big">
+        <div class="container">
+          <div class="subscribe__inner">
+            <h2 class="title subscribe__title">
+              Sign up to our newsletter
+            </h2>
+            <form class="subscribe__form">
+              <label for="email" class="sr-only">
+                Your email address
+              </label>
+              <input type="email" class="subscribe__input" id="email" name="email" placeholder="Your email address">
+              <button class="subscribe__btn">
+                Subscribe
+              </button>
+            </form>
+            <p class="subscribe__txt">
+              Sign up to receive style advice on wedding wear that just fits — your style, your vision, you.
+            </p>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+  <div class="container">
+    <div class="footer__top">
+      <div class="footer__contacts">
+        <a class="logo" href="#">
+          <img class="logo footer__logo" src="images/logo-white.svg" alt="Logo Patricia Wedding" width="300"
+            height="75">
+        </a>
+        <address class="footer__address">
+          <ul class="address address--white">
+            <li class="address__item">
+              <a class="address__link" href="tel:+19179586921">
+                +1 (917) 958-69-21
+              </a>
+            </li>
+            <li class="address__item">
+              <a class="address__link" href="googleapis:+19179586921">
+                <p class="address__txt">
+                  123 5th Ave, 3th floor,
+                </p>
+                <p class="address__txt">
+                  New York, NY 10003, USA
+                </p>
+              </a>
+            </li>
+            <li class="address__item">
+              <a class="address__link" href="mailto:info@patriciaweddig.com">
+                info@patriciaweddig.com
+              </a>
+            </li>
+          </ul>
+        </address>
+      </div>
+
+      <ul class="footer__info">
+        <li class="footer__content">
+          <button class="footer__btn" aria-expanded="false">
+            Online orders
+            <svg class="footer__btn-icon" width="24" height="24">
+              <use href="./images/symbol-defs.svg#icon-chevron"></use>
+            </svg>
+          </button>
+
+          <ul class="footer__list " aria-hidden="true" id="list">
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                Order Status
+              </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                Shipping Information
+              </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                Secure payment
+              </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                Returns and Exchanges
+              </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                International Orders
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="footer__content">
+          <button class="footer__btn" aria-expanded="false">
+            Help center
+            <svg class="footer__btn-icon" width="24" height="24">
+              <use href="./images/symbol-defs.svg#icon-chevron"></use>
+            </svg>
+          </button>
+
+          <ul class="footer__list " aria-hidden="true">
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                FAQ
+              </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                Site map
+              </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                Virtual Appointment
+              </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                Share your wedding pictures
+              </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                Privacy policy
+              </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                Website Terms of Use
+              </a>
+            </li>
+
+          </ul>
+        </li>
+
+        <li class="footer__content">
+          <button class="footer__btn" aria-expanded="false">
+            Follow us
+            <svg class="footer__btn-icon" width="24" height="24">
+              <use href="./images/symbol-defs.svg#icon-chevron"></use>
+            </svg>
+          </button>
+          <ul class="footer__list" aria-hidden="true">
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                Instagram
+              </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                Facebook
+              </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                Pinterest
+              </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                Twitter
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <ul class="footer__bottom">
+      <li class="footer__bottom-item">
+        <ul class="footer__payment">
+          <li class="footer__payment-item">
+            <svg class="footer__icon" width="44" height="28">
+              <use href="./images/symbol-defs.svg#icon-mastercard"></use>
+            </svg>
+          </li>
+          <li class="footer__payment-item">
+            <svg class="footer__icon" width="44" height="28">
+              <use href="./images/symbol-defs.svg#icon-visa"></use>
+            </svg>
+          </li>
+          <li class="footer__payment-item">
+            <svg class="footer__icon" width="44" height="28">
+              <use href="./images/symbol-defs.svg#icon-paypal"></use>
+            </svg>
+          </li>
+        </ul>
+      </li>
+      <li class="footer__bottom-item">
+          2021@PatriciaWedding
+      </li>
+      <li class="footer__bottom-item">
+        <a class="footer__bottom-link"
+          href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=irynakozlova.k@gmail.com" target="_blank">
+          created by iryna kozlova
+        </a>
+      </li>
+    </ul>
+  </div>
+</footer>
+
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>

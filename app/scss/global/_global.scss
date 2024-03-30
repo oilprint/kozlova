@@ -24,6 +24,10 @@ body {
   }
 }
 
+main {
+  flex-grow: 1;
+}
+
 .wrapper {
   position: relative;
   overflow-x: hidden;
@@ -34,10 +38,6 @@ body {
   &.lock {
     overflow: hidden;
   }
-}
-
-main {
-  flex-grow: 1;
 }
 
 .container {
@@ -160,7 +160,6 @@ main {
     font-size: 36px;
     line-height: 1;
     font-weight: 700;
-    text-transform: uppercase;
     margin-bottom: 20px;
 
     @media (max-width: 992px) {
@@ -301,8 +300,8 @@ main {
   }
 
   &__icon {
-    width: 28px;
-    height: 28px;
+    width: 44px;
+    height: 44px;
 
     &--git {
       width: 65px;
@@ -310,8 +309,24 @@ main {
     }
 
     &--tailwind {
-      width: 100px;
-      height: 14px;
+      width: 160px;
+      height: 20px;
+    }
+
+    @media (max-width: 480px) {
+      width: 30px;
+      height: 30px;
+
+
+      &--git {
+        width: 60px;
+        height: 20px;
+      }
+
+      &--tailwind {
+        width: 120px;
+        height: 16px;
+      }
     }
   }
 }
