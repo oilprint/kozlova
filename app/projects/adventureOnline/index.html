@@ -1,0 +1,1129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Agency Adventure Online | Home Page</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&family=Rubik:wght@400;500&display=swap"
+  rel="stylesheet">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="./images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon/favicon-16x16.png">
+
+  <link rel="stylesheet" href="css/index.min.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+  <div class="container header__container">
+
+    <div class="header__inner">
+      <a href="index.html" class="logo header__logo">
+        <img class="logo__img" src="./images/logo.svg" alt="Logo Adventure Online">
+      </a>
+
+      <button class="header__btn mobile-btn mobile-btn--open" type="button" data-burger-open>
+        <span class=" sr-only">Open menu</span>
+        <svg class="mobile-btn__icon" width="44" height="44">
+          <use href="./images/symbol-defs.svg#icon-open-menu"></use>
+        </svg>
+      </button>
+      <nav class="header__nav">
+        <ul class="menu header__menu menu--mobile">
+          <li class="menu__item">
+            <a class="menu__link current" href="index.html">
+              Home
+            </a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link @@about" href="#">
+              About Us
+            </a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link @@trips" href="tour.html">
+              Your trips
+            </a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link @@guide" href="tour.html">
+              Blog
+            </a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link @@contact" href="tour.html">
+              Contact
+            </a>
+          </li>
+        </ul>
+
+        <button class="button" type="button" data-modal-button>
+          Contact Us
+        </button>
+      </nav>
+
+      <button class="mobile-menu__button mobile-btn hide" type="button" data-burger-close>
+        <span class=" sr-only">Close menu</span>
+        <svg class="mobile-btn__icon" width="22" height="22">
+          <use href="./images/symbol-defs.svg#icon-close-menu"></use>
+        </svg>
+      </button>
+
+    </div>
+  </div>
+   <div id="appointment" class="backdrop hidden" data-modal>
+   <div class="modal modal--small">
+     <div class="appointment">
+       <div class="appointment__headline">
+         Contact Us:
+       </div>
+       <ul class="appointment__messengers messengers">
+         <li class="messengers__item">
+           <a class="messengers__link" href="tel:+12085550112" title="Call Us">
+             <svg class="messengers__icon" width="32" height="32">
+               <use href="./images/symbol-defs.svg#icon-tel"></use>
+             </svg>
+             +1(208) 555-0112
+           </a>
+         </li>
+
+         <li class="messengers__item">
+           <a class="messengers__link" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=info@adv.com">
+             <svg class="messengers__icon" width="20" height="20">
+               <use href="./images/symbol-defs.svg#icon-mail"></use>
+             </svg>
+             info@adv.com
+           </a>
+         </li>
+       </ul>
+     </div>
+     <button class="modal__close-btn modal-button" type="button" data-modal-close>
+       <svg class="modal__close-btn-icon" width="32" height="32">
+         <use href="./images/symbol-defs.svg#icon-close"></use>
+       </svg>
+     </button>
+   </div>
+ </div>
+</header>
+
+    <main>
+
+      <h1 class="sr-only">
+        Discover Your Dream Destinations with Adventure-online
+      </h1>
+
+      <section class="hero">
+  <div class="swiper hero__inner swiper-1">
+    <div class="swiper-wrapper hero__wrapper">
+
+      <div class="swiper-slide hero__item">
+        <div class="hero__layer" style="background-image: url('./images/slider/slide-1/kenai-back.webp')"
+          data-swiper-parallax="76%"></div>
+        <div class="hero__layer" style="background-image: url('./images/slider/slide-1/kenai-middle.webp')"
+          data-swiper-parallax="70%"></div>
+        <div class="hero__layer" style="background-image: url('./images/slider/slide-1/kenai-second.webp')"
+          data-swiper-parallax="50%"></div>
+        <div class="hero__layer" style="background-image: url('./images/slider/slide-1/kenai-front.webp')"
+          data-swiper-parallax="30%"></div>
+        <div class="hero__layer hero__info" data-swiper-parallax="-100%">
+          <div class="container hero__container">
+            <div class="hero__content">
+              <p class="hero__tagline">
+                National Park USA
+              </p>
+              <h2 class="hero__title">
+                Kenai Fjords
+              </h2>
+              <div class="hero__bottom">
+                <a href="tour.html" class="button hero__button">
+                  Book this Trip
+                </a>
+                <ul class="hero__list">
+                  <li class="hero__item-icon">
+                    <svg class="hero__icon" width="32" height="32">
+                      <use href="./images/symbol-defs.svg#icon-trip"></use>
+                    </svg>
+                  </li>
+                  <li class="hero__item-icon">
+                    <svg class="hero__icon" width="32" height="32">
+                      <use href="./images/symbol-defs.svg#icon-plane"></use>
+                    </svg>
+                  </li>
+                  <li class="hero__item-icon">
+                    <svg class="hero__icon" width="32" height="32">
+                      <use href="./images/symbol-defs.svg#icon-hotel"></use>
+                    </svg>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper-slide hero__item">
+        <div class="hero__layer" style="background-image: url('./images/slider/slide-3/new-york2-back.webp')"
+          data-swiper-parallax="66%"></div>
+        <div class="hero__layer" style="background-image: url('./images/slider/slide-3/new-york2-middle.webp')"
+          data-swiper-parallax="60%">
+        </div>
+        <div class="hero__layer" style="background-image: url('./images/slider/slide-3/new-york2-front.webp')"
+          data-swiper-parallax="30%">
+        </div>
+        <div class="hero__layer hero__info" data-swiper-parallax="-100%">
+          <div class="container hero__container">
+            <div class="hero__content">
+              <p class="hero__tagline">
+                Discover
+              </p>
+              <h2 class="hero__title">
+                New York
+              </h2>
+              <div class="hero__bottom">
+                <a href="tour.html" class="button hero__button">
+                  Book this Trip
+                </a>
+                <ul class="hero__list">
+                  <li class="hero__item-icon">
+                    <svg class="hero__icon" width="32" height="32">
+                      <use href="./images/symbol-defs.svg#icon-city"></use>
+                    </svg>
+                  </li>
+                  <li class="hero__item-icon">
+                    <svg class="hero__icon" width="32" height="32">
+                      <use href="./images/symbol-defs.svg#icon-plane"></use>
+                    </svg>
+                  </li>
+                  <li class="hero__item-icon">
+                    <svg class="hero__icon" width="32" height="32">
+                      <use href="./images/symbol-defs.svg#icon-hotel"></use>
+                    </svg>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper-slide hero__item">
+        <div class="hero__layer" style="background-image: url('./images/slider/slide-2/layer-back.webp')"
+          data-swiper-parallax="68%"></div>
+        <div class="hero__layer" style="background-image: url('./images/slider/slide-2/layer-middle-2.webp')"
+          data-swiper-parallax="57%"></div>
+        <div class="hero__layer" style="background-image: url('./images/slider/slide-2/layer-middle.webp')"
+          data-swiper-parallax="35%"></div>
+        <div class="hero__layer" style="background-image: url('./images/slider/slide-2/layer-front.webp')"
+          data-swiper-parallax="14%"></div>
+        <div class="hero__layer hero__info" data-swiper-parallax="-100%">
+          <div class="container hero__container">
+            <div class="hero__content">
+              <p class="hero__tagline">
+                National Park USA
+              </p>
+              <h2 class="hero__title">
+                Kings Canyon
+              </h2>
+              <div class="hero__bottom">
+                <a href="tour.html" class="button hero__button">
+                  Book this Trip
+                </a>
+                <ul class="hero__list">
+                  <li class="hero__item-icon">
+                    <svg class="hero__icon" width="32" height="32">
+                      <use href="./images/symbol-defs.svg#icon-trip"></use>
+                    </svg>
+                  </li>
+                  <li class="hero__item-icon">
+                    <svg class="hero__icon" width="32" height="32">
+                      <use href="./images/symbol-defs.svg#icon-plane"></use>
+                    </svg>
+                  </li>
+                  <li class="hero__item-icon">
+                    <svg class="hero__icon" width="32" height="32">
+                      <use href="./images/symbol-defs.svg#icon-hotel"></use>
+                    </svg>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+      <section class="category section" style="background-image: url('./images/decor/category.webp');">
+
+  <div class="container">
+    <h2 class="title category__title">
+      Choose Adventure
+    </h2>
+    <h3 class="subtitle category__subtitle">
+      Popular adventure categories
+    </h3>
+
+    <ul class="category__list">
+      <li class="category__item">
+        <article class="info-card">
+          <div class="info-card__inner">
+            <div class="info-card__content" style="background-image:url('./images/icons/hikking.svg')">
+              <div class="info-card__content-top">
+                <h3 class="info-card__title">
+                  Hiking Escapades
+                </h3>
+                <p class="info-card__txt">
+                  Explore scenic trails and conquer breathtaking peaks
+                </p>
+              </div>
+
+              <a class="button info-card__button" href="#">
+                Book now
+              </a>
+            </div>
+            <a class="info-card__img-box" href="#">
+              <img class="info-card__img" src="./images/category/photo-01.webp"
+                alt="A group of tourists stands on the top of a mountain" width="600" height="250">
+            </a>
+          </div>
+        </article>
+      </li>
+
+      <li class="category__item">
+        <article class="info-card">
+          <div class="info-card__inner">
+            <div class="info-card__content" style="background-image:url('./images/icons/watersport.svg')">
+              <div class="info-card__content-top">
+                <h3 class="info-card__title">
+                  Water Adventures
+                </h3>
+                <p class="info-card__txt">
+                  Enjoy adrenaline-pumping water activities like surfing, kayaking, or rafting
+                </p>
+              </div>
+              <a class="button info-card__button" href="#">
+                Book now
+              </a>
+            </div>
+            <a class="info-card__img-box" href="#">
+              <img class="info-card__img" src="./images/category/photo-02.webp"
+                alt="A girl rides a kayak on a lake surrounded by mountains" width="600" height="250">
+            </a>
+          </div>
+        </article>
+      </li>
+
+      <li class="category__item">
+        <article class="info-card">
+          <div class="info-card__inner">
+            <div class="info-card__content" style="background-image:url('./images/icons/biking.svg')">
+              <div class="info-card__content-top">
+                <h3 class="info-card__title">
+                  Urban Exploration
+                </h3>
+                <p class="info-card__txt">
+                  Discover hidden gems and vibrant cultures in bustling cities
+                </p>
+              </div>
+              <a class="button info-card__button" href="#">
+                Book now
+              </a>
+            </div>
+            <a class="info-card__img-box" href="#">
+              <img class="info-card__img" src="./images/category/photo-03.webp" alt="A girl photographs sights in Italy"
+                width="600" height="250">
+            </a>
+          </div>
+        </article>
+      </li>
+
+      <li class="category__item">
+        <article class="info-card">
+          <div class="info-card__inner">
+            <div class="info-card__content" style="background-image:url('./images/icons/hikking.svg')">
+              <div class="info-card__content-top">
+                <h3 class="info-card__title">
+                  Winter Wonderland
+                </h3>
+                <p class="info-card__txt">
+                  Embrace the cold with skiing, snowboarding, and ice climbing
+                </p>
+              </div>
+              <a class="button info-card__button" href="#">
+                Book now
+              </a>
+            </div>
+            <a class="info-card__img-box" href="#">
+              <img class="info-card__img" src="./images/category/photo-04.webp"
+                alt="Guy skiing on a sunny day in the mountains" width="600" height="250">
+            </a>
+          </div>
+        </article>
+      </li>
+    </ul>
+
+    <a class="category__link link" href="#">
+      Look all Adventure
+    </a>
+  </div>
+</section>
+      <section class="section about section--light" style="background-image: url(./images/decor/decor-aboutUs.webp)">
+  <div class="container about__container">
+    <h2 class="title title--light destinations__title">
+      why Choose Us
+    </h2>
+
+    <!-- gsap__bl -->
+    <div class="about__gsap">
+      <div class="about__inner">
+        <div class="about__track">
+          <ul class="about__list">
+            <li class="about__item">
+              <img class="about__img" src="./images/about/about-01.webp" alt="" loading="lazy" width="570" height="300">
+              <div class="about__content">
+                <h3 class="about__headline headline">
+                  Expertise:
+                </h3>
+                <p class="about__text">
+                  With years of experience and a team of adventure aficionados, we curate adventures that are not
+                  just
+                  exhilarating but
+                  also safe and well-planned.
+                </p>
+              </div>
+
+            </li>
+            <li class="about__item">
+              <img class="about__img" src="./images/about/about-02.webp" alt="" loading="lazy" width="570" height="300">
+              <div class="about__content">
+                <h3 class="about__headline headline">
+                  Safety First:
+                </h3>
+                <p class="about__text">
+                  Your safety is our top priority. We work with certified guides and adhere to the highest safety
+                  standards,
+                  allowing you to embark on your adventure with confidence and peace of mind.
+                </p>
+              </div>
+            </li>
+          </ul>
+          <div class="about__bottom">
+            <p class="about__big-text about__bottom-first">
+              Our mission is to ignite the adventurous soul in every wanderer
+            </p>
+
+            <div class="about__item">
+              <img class="about__img" src="./images/about/about-03.webp" alt="" loading="lazy" width="570" height="300">
+              <div class="about__content">
+                <h3 class="about__headline headline">
+                  Personalized Journeys:
+                </h3>
+                <p class="about__text">
+                  We understand that every adventurer is unique. That's why we offer customizable packages to ensure
+                  your
+                  adventure aligns perfectly with your preferences and expectations.
+                </p>
+              </div>
+            </div>
+
+            <div class="about__links">
+              <p class="about__big-text">
+                Learn more about Adventure online</p>
+              <a class="about__link button" href="#">
+                About us
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!-- gsap__bl END -->
+
+</section>
+      <section class="mission section" style="background-image: url(./images/decor/decor-mission.webp)">
+  <div class="container">
+    <p class="mission__text">
+      We aspire to awaken the adventurous spirit within every traveler
+    </p>
+  </div>
+</section>
+
+      <section class="section destinations section--light"
+  style="background-image: url(./images/decor/decor-destinations.webp)">
+  <div class="destination__wrapper">
+    <div class="container">
+      <h2 class="title title--light destinations__title">
+        Top destinations
+      </h2>
+
+      <ul class="destinations__list">
+        <li class="destinations__item">
+          <a class="destinations-card" href="tour.html">
+            <div class="destinations-card__box">
+              <img class="destinations-card__img" src="./images/destinations/new-york.webp" alt="New-York street"
+                width="570" height="300" loading="lazy">
+              <div class="destinations-card__description">
+                <div class="destinations-card__inner">
+                  <h4 class="destinations-card__geo">
+                    New York, USA
+                  </h4>
+                  <ul class="destinations-card__list destination-details">
+                    <li class="destination-details__item destination-details__item--accent">
+                      <span class="destination-details__subtitle">
+                        Departure
+                      </span>
+                      <span class="destination-details__txt">
+                        Nov, 1
+                      </span>
+                    </li>
+                    <li class="destination-details__item">
+                      <span class="destination-details__subtitle">
+                        Group size
+                      </span>
+                      <span class="destination-details__txt">
+                        20
+                      </span>
+                    </li>
+                    <li class="destination-details__item">
+                      <span class="destination-details__subtitle">
+                        Duration
+                      </span>
+                      <span class="destination-details__txt">
+                        5 days
+                      </span>
+                    </li>
+                    <li class="destination-details__item">
+                      <span class="destination-details__subtitle">
+                        Price
+                      </span>
+                      <span class="destination-details__txt">
+                        $ 2500
+                      </span>
+                    </li>
+
+                  </ul>
+                  <ul class="destinations-card__icons">
+                    <li class="destinations-card__icons-item">
+                      <svg class="destinations-card__icon" width="32" height="32">
+                        <use href="./images/symbol-defs.svg#icon-car"></use>
+                      </svg>
+                    </li>
+                    <li class="destinations-card__icons-item">
+                      <svg class="destinations-card__icon" width="32" height="32">
+                        <use href="./images/symbol-defs.svg#icon-plane"></use>
+                      </svg>
+                    </li>
+                    <li class="destinations-card__icons-item">
+                      <svg class="destinations-card__icon" width="32" height="32">
+                        <use href="./images/symbol-defs.svg#icon-hotel"></use>
+                      </svg>
+                    </li>
+
+                  </ul>
+
+                </div>
+              </div>
+            </div>
+            <h3 class="destinations-card__title">
+              New York
+            </h3>
+          </a>
+        </li>
+
+        <li class="destinations__item">
+          <a href="tour.html" class="destinations-card">
+
+            <div class="destinations-card__box">
+              <img class="destinations-card__img" src="./images/destinations/toronto.webp" alt="Toronto street"
+                width="570" height="300" loading="lazy">
+              <div class="destinations-card__description">
+                <div class="destinations-card__inner">
+                  <h4 class="destinations-card__geo">
+                    Toronto, Canada
+                  </h4>
+                  <ul class="destinations-card__list destination-details">
+                    <li class="destination-details__item destination-details__item--accent">
+                      <span class="destination-details__subtitle">
+                        departure
+                      </span>
+                      <span class="destination-details__txt">
+                        nov, 1
+                      </span>
+                    </li>
+                    <li class="destination-details__item">
+                      <span class="destination-details__subtitle">
+                        group size
+                      </span>
+                      <span class="destination-details__txt">
+                        20
+                      </span>
+                    </li>
+                    <li class="destination-details__item">
+                      <span class="destination-details__subtitle">
+                        duration
+                      </span>
+                      <span class="destination-details__txt">
+                        5 days
+                      </span>
+                    </li>
+                    <li class="destination-details__item">
+                      <span class="destination-details__subtitle">
+                        price
+                      </span>
+                      <span class="destination-details__txt">
+                        $ 2500
+                      </span>
+                    </li>
+
+                  </ul>
+                  <ul class="destinations-card__icons">
+                    <li class="destinations-card__icons-item">
+                      <svg class="destinations-card__icon" width="32" height="32">
+                        <use href="./images/symbol-defs.svg#icon-city"></use>
+                      </svg>
+                    </li>
+                    <li class="destinations-card__icons-item">
+                      <svg class="destinations-card__icon" width="32" height="32">
+                        <use href="./images/symbol-defs.svg#icon-fly"></use>
+                      </svg>
+                    </li>
+                    <li class="destinations-card__icons-item">
+                      <svg class="destinations-card__icon" width="32" height="32">
+                        <use href="./images/symbol-defs.svg#icon-hotel"></use>
+                      </svg>
+                    </li>
+
+                  </ul>
+
+                </div>
+              </div>
+            </div>
+
+            <h3 class="destinations-card__title">
+              Toronto
+            </h3>
+
+          </a>
+        </li>
+
+        <li class="destinations__item">
+          <a href="tour.html" class="destinations-card">
+
+            <div class="destinations-card__box">
+              <img class="destinations-card__img" src="./images/destinations/vegas.webp" alt="Las-Vegas" width="570"
+                height="300" loading="lazy">
+              <div class="destinations-card__description">
+                <div class="destinations-card__inner">
+                  <h4 class="destinations-card__geo">
+                    Las Vegas, USA
+                  </h4>
+                  <ul class="destinations-card__list destination-details">
+                    <li class="destination-details__item destination-details__item--accent">
+                      <span class="destination-details__subtitle">
+                        departure
+                      </span>
+                      <span class="destination-details__txt">
+                        nov, 1
+                      </span>
+                    </li>
+                    <li class="destination-details__item">
+                      <span class="destination-details__subtitle">
+                        group size
+                      </span>
+                      <span class="destination-details__txt">
+                        20
+                      </span>
+                    </li>
+                    <li class="destination-details__item">
+                      <span class="destination-details__subtitle">
+                        duration
+                      </span>
+                      <span class="destination-details__txt">
+                        5 days
+                      </span>
+                    </li>
+                    <li class="destination-details__item">
+                      <span class="destination-details__subtitle">
+                        price
+                      </span>
+                      <span class="destination-details__txt">
+                        $ 2500
+                      </span>
+                    </li>
+
+                  </ul>
+                  <ul class="destinations-card__icons">
+                    <li class="destinations-card__icons-item">
+                      <svg class="destinations-card__icon" width="32" height="32">
+                        <use href="./images/symbol-defs.svg#icon-city"></use>
+                      </svg>
+                    </li>
+                    <li class="destinations-card__icons-item">
+                      <svg class="destinations-card__icon" width="32" height="32">
+                        <use href="./images/symbol-defs.svg#icon-fly"></use>
+                      </svg>
+                    </li>
+                    <li class="destinations-card__icons-item">
+                      <svg class="destinations-card__icon" width="32" height="32">
+                        <use href="./images/symbol-defs.svg#icon-hotel"></use>
+                      </svg>
+                    </li>
+
+                  </ul>
+
+                </div>
+              </div>
+            </div>
+
+            <h3 class="destinations-card__title">
+              Las Vegas
+            </h3>
+
+          </a>
+        </li>
+
+        <li class="destinations__item">
+          <a href="tour.html" class="destinations-card">
+
+            <div class="destinations-card__box">
+              <img class="destinations-card__img" src="./images/destinations/banff.webp" alt="Banff Canada" width="570"
+                height="300" loading="lazy">
+              <div class="destinations-card__description">
+                <div class="destinations-card__inner">
+                  <h4 class="destinations-card__geo">
+                    Banff, Canada
+                  </h4>
+                  <ul class="destinations-card__list destination-details">
+                    <li class="destination-details__item destination-details__item--accent">
+                      <span class="destination-details__subtitle">
+                        departure
+                      </span>
+                      <span class="destination-details__txt">
+                        nov, 1
+                      </span>
+                    </li>
+                    <li class="destination-details__item">
+                      <span class="destination-details__subtitle">
+                        group size
+                      </span>
+                      <span class="destination-details__txt">
+                        20
+                      </span>
+                    </li>
+                    <li class="destination-details__item">
+                      <span class="destination-details__subtitle">
+                        duration
+                      </span>
+                      <span class="destination-details__txt">
+                        5 days
+                      </span>
+                    </li>
+                    <li class="destination-details__item">
+                      <span class="destination-details__subtitle">
+                        price
+                      </span>
+                      <span class="destination-details__txt">
+                        $ 2500
+                      </span>
+                    </li>
+
+                  </ul>
+                  <ul class="destinations-card__icons">
+                    <li class="destinations-card__icons-item">
+                      <svg class="destinations-card__icon" width="32" height="32">
+                        <use href="./images/symbol-defs.svg#icon-city"></use>
+                      </svg>
+                    </li>
+                    <li class="destinations-card__icons-item">
+                      <svg class="destinations-card__icon" width="32" height="32">
+                        <use href="./images/symbol-defs.svg#icon-fly"></use>
+                      </svg>
+                    </li>
+                    <li class="destinations-card__icons-item">
+                      <svg class="destinations-card__icon" width="32" height="32">
+                        <use href="./images/symbol-defs.svg#icon-hotel"></use>
+                      </svg>
+                    </li>
+
+                  </ul>
+
+                </div>
+              </div>
+            </div>
+
+            <h3 class="destinations-card__title">
+              Banff
+            </h3>
+
+          </a>
+        </li>
+      </ul>
+
+      <a class="button destinations__link" href="#">
+        Show More
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+      <section class="news section" style="background-image: url(./images/decor/decor-news.webp)">
+  <div class="container">
+    <h2 class="title news__title">
+      Adventure Blog
+    </h2>
+    <h3 class="subtitle news__subtitle ">
+      Trips and tips
+    </h3>
+    <div class="news__content">
+      <div class="news__item news__item--first" style="background-image: url('./images/blog/cover-2.webp');">
+      </div>
+
+      <div class="news-card news__item news__item--big">
+        <div class="news-card__inner">
+          <div class="news-card__img-box">
+            <img class="news-card__img" src="./images/blog/water-2.webp"
+              alt="A girl with friends kayaks on a lake among the mountains" width="250" height="220">
+          </div>
+          <div class="news-card__content" style="background-image:url('./images/icons/water-2.svg')">
+            <h4 class="news-card__title">
+              Water Adventures
+            </h4>
+            <p class="news-card__txt">
+              Enjoy adrenaline-pumping water activities like surfing, kayaking, or rafting
+            </p>
+            <a href="#" class="button news-card__button">
+              read more
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="news-card news__item news__item--big">
+        <div class="news-card__inner">
+          <div class="news-card__img-box">
+            <img class="news-card__img" src="./images/blog/hiking-2.webp"
+              alt="A guy travels with his dog in the mountains" width="250" height="220">
+          </div>
+          <div class="news-card__content" style="background-image:url('./images/icons/watersport.svg')">
+            <h4 class="news-card__title">
+              Hiking Escapades
+            </h4>
+            <p class="news-card__txt">
+              Explore scenic trails and conquer breathtaking peaks
+            </p>
+
+            <a href="#" class="button news-card__button">
+              Read more
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="news__item">
+        <div class="news__info">
+          <span class="news__txt">
+            Story
+          </span>
+          <span class="news__txt">
+            Trips
+          </span>
+          <span class="news__txt">
+            Adviсe
+          </span>
+          <span class="news__txt">
+            Guidance
+          </span>
+        </div>
+        <a href="#" class="button news__button">
+          Read all
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+      <section class="section testimonial section--light"
+  style="background-image: url(./images/decor/decor-testimonial.webp)">
+
+  <div class="container">
+    <h2 class="title title--light destinations__title">
+      Travelers' Stories
+    </h2>
+
+    <div class="testimonial__inner swiper swiper-2" id="swiper-2">
+
+      <div class="swiper-wrapper testimonial__wrapper">
+        <div class="swiper-slide testimonial__item">
+          <blockquote class="testimonial__content">
+            <div class="testimonial__img-box">
+              <img class="testimonial__img" src="./images/testimonials/review-01.webp" alt="" loading="lazy" width="500"
+                height="630">
+            </div>
+            <div class="testimonial__info">
+              <span class="testimonial__name">
+                Daniel
+              </span>
+              <p class="testimonial__txt">
+                Visiting Germany was an amazing experience! From the rich history of Berlin to the charming streets of
+                Munich and the stunning beauty of the Bavarian Alps, every moment was filled with wonder. The
+                hospitality, culture, and cuisine made this trip unforgettable.
+              </p>
+            </div>
+          </blockquote>
+        </div>
+
+        <div class="swiper-slide testimonial__item">
+          <blockquote class="testimonial__content">
+            <div class="testimonial__img-box">
+              <img class="testimonial__img" src="./images/testimonials/review-04.webp" alt="Our cusromers in New-York"
+                loading="lazy" width="500" height="630">
+            </div>
+            <div class="testimonial__info">
+              <span class="testimonial__name">
+                Emily
+              </span>
+              <p class="testimonial__txt">
+                Absolutely amazing experience with this agency! They helped me plan a fantastic road trip visiting
+                iconic destinations like New York City, the Grand Canyon. Everything was
+                well-organized and hassle-free. Highly recommend!
+              </p>
+            </div>
+          </blockquote>
+        </div>
+
+        <div class="swiper-slide testimonial__item">
+          <blockquote class="testimonial__content">
+            <div class="testimonial__img-box">
+              <img class="testimonial__img" src="./images/testimonials/review-02.webp" alt="Our cusromers in Canada"
+                loading="lazy" width="500" height="630">
+            </div>
+            <div class="testimonial__info">
+              <span class="testimonial__name">
+                Michael
+              </span>
+              <p class="testimonial__txt">
+                Highly recommend this agency for anyone planning a trip to Canada. They helped me discover hidden gems
+                and experience the best of Canadian hospitality. From exploring the vibrant city of Toronto to immersing
+                myself in the natural beauty of Banff, it was an adventure of a lifetime.
+              </p>
+            </div>
+          </blockquote>
+        </div>
+
+        <div class="swiper-slide testimonial__item">
+          <blockquote class="testimonial__content">
+            <div class="testimonial__img-box">
+              <img class="testimonial__img" src="./images/testimonials/review-03.webp" alt="Our cusromers in New-York"
+                loading="lazy" width="500" height="630">
+            </div>
+            <div class="testimonial__info">
+              <span class="testimonial__name">
+                Sara
+              </span>
+              <p class="testimonial__txt">
+                New York exceeded all my expectations and even more! I visited the Statue of Liberty, explored
+                the Museum of Modern Art, and, of course, couldn't resist the shops on Fifth Avenue. This city is full
+                of life and diversity, and I'm already dreaming of returning.
+              </p>
+            </div>
+          </blockquote>
+        </div>
+
+        <div class="swiper-slide testimonial__item">
+          <blockquote class="testimonial__content">
+            <div class="testimonial__img-box">
+              <img class="testimonial__img" src="./images/testimonials/review-05.webp"
+                alt="Our cusromers in Yellowstone National Park" loading="lazy" width="500" height="630">
+            </div>
+            <div class="testimonial__info">
+              <span class="testimonial__name">
+                John
+              </span>
+              <p class="testimonial__txt">
+                My visit to Yellowstone National Park was unforgettable. Encountering the wilderness and unique
+                geological features left me in awe.
+              </p>
+            </div>
+          </blockquote>
+        </div>
+
+      </div>
+      <div class="testimonial__swiper-bottom">
+        <div class="swiper-pagination testimonial__swiper-pagination"></div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper__buttons">
+          <div class="swiper-button-prev">
+            <svg class="swiper-button-icon" width="20" height="20">
+              <use href="./images/symbol-defs.svg#icon-arrow"></use>
+            </svg>
+          </div>
+          <div class="swiper-button-next">
+            <svg class="swiper-button-icon" width="20" height="20">
+              <use href="./images/symbol-defs.svg#icon-arrow"></use>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <section class="book section book__section" style="background-image: url('../images/decor/decor-book.webp')">
+  <div class="container">
+    <div class="book__top">
+      <h2 class="title book__title">
+        Book Adventure here!
+      </h2>
+      <a href="#" class="button book__button">
+        Book Your Adventure
+      </a>
+    </div>
+  </div>
+  <div class="ticker">
+    <div class="ticker__wrapper">
+      <div class="ticker__item">Book Your Adventure here!</div>
+      <div class="ticker__item">Book Your Adventure here!</div>
+      <div class="ticker__item">Book Your Adventure here!</div>
+    </div>
+  </div>
+</section>
+    </main>
+
+    <footer class="footer">
+  <div class="container">
+    <form class="footer__form subscribe-form" action="#">
+      <div class="subscribe-form__inputs">
+        <label class="subscribe-form__label" for="name">
+          <input id="name" class="subscribe-form__input" type="text" placeholder="Name" required>
+        </label>
+
+        <label class="subscribe-form__label" for="e-mail">
+          <input id="e-mail" class="subscribe-form__input" type="email" placeholder="E-mail" name="email" required>
+        </label>
+      </div>
+
+      <button class="button subscribe-form__button" type="submit">
+        subscribe
+      </button>
+    </form>
+
+    <div class="footer__content">
+      <a class="logo footer__logo" href="#">
+        <img class="logo__img" src="./images/logo-white.svg" alt="Logo Adventure Online">
+      </a>
+
+      <address class="footer__address">
+        <div class="footer__geo">
+          2464 Royal Ln. Mesa,
+          <br>
+          New Jersey 45463
+        </div>
+        <a class="footer__address-link footer__address-link--big" href="tel:+12085550112">
+          (208) 555-0112
+        </a>
+        <a class="footer__address-link" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=info@adv.com">
+          <svg class="footer__address-icon" width="20" height="20">
+            <use href="./images/symbol-defs.svg#icon-mail"></use>
+          </svg>
+          info@adv.com
+        </a>
+      </address>
+
+      <div class="social footer__social">
+        <h2 class="social__title">
+          Join us
+        </h2>
+        <ul class="social__list">
+          <li class="social__item">
+            <a class="social__link" href="#">
+              Facebook
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link" href="#">
+              Youtube
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link" href="#">
+              Instagram
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <ul class="menu footer__menu">
+      <li class="menu__item">
+        <a class="menu__link current" href="#">
+          Home
+        </a>
+      </li>
+      <li class="menu__item">
+        <a class="menu__link @@about" href="#">
+          About Us
+        </a>
+      </li>
+      <li class="menu__item">
+        <a class="menu__link @@trips" href="tour.html">
+          Your trips
+        </a>
+      </li>
+      <li class="menu__item">
+        <a class="menu__link @@guide" href="#">
+          blog
+        </a>
+      </li>
+      <li class="menu__item">
+        <a class="menu__link @@contact" href="#">
+          Contact
+        </a>
+      </li>
+    </ul>
+
+    <div class="footer__bottom">
+      <div class="footer__info">
+        <p class="footer__text">
+          © 2023. All rights reserved
+        </p>
+
+        <ul class="footer__links">
+          <li class="footer__links-item">
+            <a class="footer__link" href="#">
+              Terms
+            </a>
+          </li>
+          <li class="footer__links-item">
+            <a class="footer__link" href="#">
+              Privacy
+            </a>
+          </li>
+        </ul>
+      </div>
+      <a class="footer__link" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=kozlova.ux@gmail.com"
+        target="_blank">
+        created by iryna kozlova
+      </a>
+    </div>
+  </div>
+</footer>
+  </div>
+  <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.0/bundled/lenis.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
+  <script src="js/gsap.js"></script>
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>
