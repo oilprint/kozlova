@@ -1,6 +1,10 @@
 .about {
   padding: 40px 0;
 
+  @media (max-width: 480px) {
+    padding: 20px 0;
+  }
+
   &__inner {
     display: flex;
     gap: calc(20px + 2vw);
@@ -76,6 +80,14 @@
 
     @media (max-width: 1440px) {
       font-size: calc(32px + (56 - 32) * ((100vw - 375px) / (1440 - 375)));
+    }
+
+    @media (max-width: 480px) {
+      font-size: 32px;
+    }
+
+    @media (max-width: 375px) {
+      font-size: 28px;
     }
   }
 }

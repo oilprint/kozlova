@@ -1,7 +1,6 @@
 html,
 body {
   height: 100%;
-
 }
 
 body {
@@ -20,7 +19,7 @@ body {
   &.lock {
     height: 100%;
     width: 100%;
-    overflow: hidden;
+    overflow-y: hidden;
   }
 }
 
@@ -31,8 +30,7 @@ main {
 .wrapper {
   position: relative;
   overflow-x: hidden;
-
-  // height: 100vh;
+  height: 100vh;
   overflow-y: scroll;
 
   &.lock {
@@ -154,6 +152,10 @@ main {
     @media (max-width: 992px) {
       font-size: 20px;
     }
+
+    @media (max-width: 480px) {
+      font-size: 18px;
+    }
   }
 
   &__title {
@@ -237,13 +239,10 @@ main {
     @media (max-width: 768px) {
       display: block;
     }
-
-    @media (max-width: 480px) {
-      height: 200px;
-    }
   }
 
   &__extra-image {
+    height: auto;
     object-fit: cover;
   }
 
@@ -278,7 +277,7 @@ main {
 
 .skills {
   display: flex;
-  gap: 8px;
+  gap: 16px;
   align-items: center;
   flex-wrap: wrap;
 
@@ -290,7 +289,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: filter 0.4s ease-in-out;
+    transition: filter 0.3s ease-in-out;
 
     &:hover {
       filter: saturate(100%);

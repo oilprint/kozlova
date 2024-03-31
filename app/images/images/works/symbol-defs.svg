@@ -1,9 +1,0 @@
-<svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<defs>
-<symbol id="icon-js" viewBox="0 0 32 32">
-  <path fill="#e9ca32" style="fill: var(--color1, #e9ca32)" d="M6.021 27.067l-2.021-25.020 24.138 0.050-2.137 24.97-9.841 2.886-10.139-2.886z"></path>
-  <path fill="#ffde25" style="fill: var(--color2, #ffde25)" d="M16.16 27.537v-23.107l9.94 0.034-1.773 20.674-8.168 2.4z"></path>
-  <path fill="#fff" style="fill: var(--color3, #fff)" d="M15.095 7.173h-2.628v15.38l-2.044-0.394v-2.070l-2.433-0.394v4.634l7.105 1.873v-19.027zM17.067 7.173h7.275l-0.487 2.948h-4.011v4.837h4.011l-0.487 9.763-6.302 1.479v-3.056l4.258-1.479 0.246-4.042-4.504 0.66v-11.111z"></path>
-</symbol>
-</defs>
-</svg>
