@@ -4,8 +4,6 @@ body {
 }
 
 body {
-  display: flex;
-  flex-direction: column;
   font-family: "Archivo",
     sans-serif;
   font-size: 18px;
@@ -23,9 +21,6 @@ body {
   }
 }
 
-main {
-  flex-grow: 1;
-}
 
 .wrapper {
   // position: relative;
