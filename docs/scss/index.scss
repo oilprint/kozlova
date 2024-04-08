@@ -1,0 +1,17 @@
+@import 'global/reset';
+
+// @import '../../node_modules/swiper/swiper.scss';
+
+@import 'global/vars';
+@import 'global/global';
+@import 'global/ints';
+
+@import 'lego/header';
+@import 'lego/hero';
+@import 'lego/about';
+@import 'lego/work';
+@import 'lego/decor';
+@import 'lego/services';
+@import 'lego/react-app';
+@import 'global/gsap';
+@import 'lego/footer';

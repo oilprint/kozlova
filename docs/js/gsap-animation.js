@@ -92,38 +92,61 @@ gsap.to('.about .skills__item', {
 
 // scrollPortfolio
 
-let workInfoItems = document.querySelectorAll('.work__photo-item');
-workInfoItems.forEach((item, index) => {
-  item.style.zIndex = workInfoItems.length - index;
-});
+const laptopScreen = window.matchMedia('(min-width:768px)');
 
-gsap.set('.work__photo-item', {
-  clipPath: function () {
-    return 'inset(0px 0px 0px 0px)'
-  }
-});
+if(laptopScreen.matches) {
+  //Lenis Smooth scroll
+	const lenis = new Lenis({
+		duration: 1.2,
+	});
+	function raf(time) {
+		lenis.raf(time)
+		requestAnimationFrame(raf)
+	}
 
-const animation = gsap.to('.work__photo-item:not(:last-child)', {
-  clipPath: function () {
-    return 'inset(0px 0px 100% 0px)'
-  },
-  stagger: 0.5,
-  ease: 'none',
-});
+	requestAnimationFrame(raf)
 
-ScrollTrigger.create({
-  trigger: '.work__wrapper',
-  start:'top top',
-  end: 'bottom bottom',
-  animation: animation,
-  scrub: true,
-})
+	//Integration Lenis on GSAP ScrollTrigger
+	lenis.on('scroll', ScrollTrigger.update)
 
-/////end scrollPortfolio
+	gsap.ticker.add((time) => {
+		lenis.raf(time * 1000)
+	})
 
-//parallax start
 
-function scrollTrig() {
+
+  let workInfoItems = document.querySelectorAll('.work__photo-item');
+  workInfoItems.forEach((item, index) => {
+    item.style.zIndex = workInfoItems.length - index;
+  });
+
+  gsap.set('.work__photo-item', {
+    clipPath: function () {
+      return 'inset(0px 0px 0px 0px)'
+    }
+  });
+
+  const animation = gsap.to('.work__photo-item:not(:last-child)', {
+    clipPath: function () {
+      return 'inset(0px 0px 100% 0px)'
+    },
+    stagger: 0.5,
+    ease: 'none',
+  });
+
+  ScrollTrigger.create({
+    trigger: '.work__wrapper',
+    start:'top top',
+    end: 'bottom bottom',
+    animation: animation,
+    scrub: true,
+  })
+
+  /////end scrollPortfolio
+
+  //parallax start
+
+  function scrollTrig() {
 		let gsapAnim = gsap.utils.toArray('.gsap__anim');
 		gsapAnim.forEach(section => {
 			gsap.to(section, {
@@ -138,18 +161,6 @@ function scrollTrig() {
 				ease: 'none'
 			});
 		});
-
-    // gsap.to('.react-app', {
-		// 		scrollTrigger: {
-		// 			trigger: '.serv',
-		// 			start: 'bottom bottom',
-		// 			end: 'bottom top',
-		// 			scrub: true,
-		// 			snap: true
-		// 		},
-		// 		yPercent: 100,
-		// 	});
-
 
     gsap.to('.title__w', {
 			scrollTrigger: {
@@ -172,8 +183,7 @@ function scrollTrig() {
 			xPercent: 20,
 			ease: 'none'
 		});
-
-		gsap.to('.serv__item:nth-child(1)', {
+    gsap.to('.serv__item:nth-child(1)', {
 			scrollTrigger: {
 				trigger: '.serv',
 				start: 'top top',
@@ -197,15 +207,16 @@ function scrollTrig() {
   }
 
   scrollTrig();
-////
+}
 
-//resize window
+
+
+  //resize window
 	const debouncedResize = _.debounce(onWindowResize, 500);
 	function onWindowResize() {
 		console.log('Window resized!');
 		location.reload();
 	}
 	
-  window.addEventListener('resize', debouncedResize);
-
+  window.addEventListener('resize', debouncedResize);    
 });

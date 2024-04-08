@@ -1,0 +1,18 @@
+.decor {
+  &__text {
+    width: 100%;
+    font-family: "Tenor Sans",
+      sans-serif;
+    text-transform: uppercase;
+    font-size: 56px;
+    line-height: 1.2;
+
+    @media (max-width: 1440px) {
+      font-size: calc(32px + (56 - 32) * ((100vw - 375px) / (1440 - 375)));
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 20px 0;
+  }
+}
