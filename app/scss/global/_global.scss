@@ -21,21 +21,6 @@ body {
   }
 }
 
-
-.wrapper {
-  // position: relative;
-  overflow-x: hidden;
-  // height: 100vh;
-  // overflow-y: scroll;
-  background-color: red;
-  height: 200px;
-  width: 100%;
-
-  &.lock {
-    overflow: hidden;
-  }
-}
-
 .container {
   max-width: 1410px;
   width: 100%;
