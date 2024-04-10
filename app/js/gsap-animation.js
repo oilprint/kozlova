@@ -2,7 +2,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   'use strict';
 
-  gsap.registerPlugin(ScrollTrigger); 
+  gsap.registerPlugin(ScrollTrigger);
+
 
   //text
 
@@ -14,7 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
       opacity:0,
       scaleY: 0.6,
       skewX: '10deg',
-      
       y: 40,
       ease: 'power4.inOut'
     })
@@ -22,40 +22,114 @@ document.addEventListener('DOMContentLoaded', () => {
       opacity:0,
       scaleY: 0.6,
       skewX: '10deg',
-      
       y: 40,
       ease: 'power4.inOut'
     },
     0.3
     )
-  }
+  };
 
   textAnimation(); 
 
-  //skills animation
-  gsap.to('.about .skills__item', {
+  const workTitle = document.querySelectorAll('.title-anim');
+  workTitle.forEach((char) => {
+    const text = new SplitType(char, {  types: 'words, chars'})
+
+    gsap.from(text.chars, {
       scrollTrigger: {
-        trigger: '.about', 
-        start: 'center 80%',
-        end: 'bottom 20%',
+        trigger: char, 
+        start: 'top 80%',
+        end: 'top 50%',
         scrub: true
       }, 
       css: {
-        filter: "saturate(100%)"
+        opacity: 0,
       },
       
       stagger: 0.1
     })
+  });
 
-  // scrollPortfolio
+  const serviceTitle = document.querySelectorAll('.serv__item-title');
+  serviceTitle.forEach((item) => {
+    gsap.from(item, {
+      scrollTrigger: {
+        trigger: item, 
+        start: 'top 90%',
+        end: 'top 65%',
+        scrub: true
+      }, 
+      opacity:0,
+      scaleY: 0.6,
+      skewX: '10deg',
+      y: 40,
+      ease: 'power4.inOut'
+    })
+  })
 
+ const splitTypes = document.querySelectorAll('.reveal-type');
+  splitTypes.forEach((char,i) => {
+    const text = new SplitType(char, {  types: 'words, chars'})
+
+    gsap.from(text.chars, {
+      scrollTrigger: {
+        trigger: char, 
+        start: 'top 80%',
+        end: 'top 20%',
+        scrub: true
+      }, 
+      css: {
+        color: '#363839',
+      },
+      
+      stagger: 0.1
+    })
+  })
+  ///end text
+
+  //skills animation
+  gsap.to('.about .skills__item', {
+    scrollTrigger: {
+      trigger: '.about', 
+      start: 'center 80%',
+      end: 'bottom 20%',
+      scrub: true
+    }, 
+    css: {
+       filter: "saturate(100%)"
+    },
+    stagger: 0.1
+  });
+
+
+  function animateListItems(sections, listItemSelector) {
+  sections.forEach(section => {
+    const listItems = section.querySelectorAll(listItemSelector);
+    listItems.forEach(item => {
+      gsap.to(item, {
+        scrollTrigger: {
+          trigger: section,
+          start: 'center 60%',
+          end: 'bottom 20%',
+          scrub: true
+        },
+        css: {
+          filter: "saturate(90%)"
+        },
+        stagger: 0.1    
+      });
+    });
+  });
+  };
+
+  const sections = document.querySelectorAll(".work-card");
+  animateListItems(sections, ".skills__item");
 
   const laptopScreen = window.matchMedia('(min-width:768px)');
 
   if(laptopScreen.matches) {
 
-
-    //Lenis Smooth scroll
+  //Lenis Smooth scroll
     const lenis = new Lenis({
       duration: 1.2,
     });
@@ -74,29 +148,7 @@ document.addEventListener('DOMContentLoaded', () => {
     })
 
 
-    const splitTypes = document.querySelectorAll('.reveal-type');
-
-  splitTypes.forEach((char,i) => {
-    const text = new SplitType(char, { types: 'chars'})
-
-    gsap.from(text.chars, {
-      scrollTrigger: {
-        trigger: char, 
-        start: 'top 80%',
-        end: 'top 20%',
-        scrub: true
-      }, 
-      css: {
-        color: '#363839',
-      },
-      
-      stagger: 0.1
-    })
-
-  })
-  ///end text
-
-
+  // scrollPortfolio
     let workInfoItems = document.querySelectorAll('.work__photo-item');
     workInfoItems.forEach((item, index) => {
       item.style.zIndex = workInfoItems.length - index;
@@ -189,14 +241,5 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     scrollTrig();
-  }
-
-  //resize window
-	const debouncedResize = _.debounce(onWindowResize, 500);
-	function onWindowResize() {
-		console.log('Window resized!');
-		location.reload();
-	}
-	
-  window.addEventListener('resize', debouncedResize);    
+  }  
 });
