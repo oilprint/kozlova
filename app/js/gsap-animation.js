@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
   'use strict';
 
   gsap.registerPlugin(ScrollTrigger);
+  
 
 
   //text
@@ -31,25 +32,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   textAnimation(); 
 
-  const workTitle = document.querySelectorAll('.title-anim');
-  workTitle.forEach((char) => {
-    const text = new SplitType(char, {  types: 'words, chars'})
-
-    gsap.from(text.chars, {
-      scrollTrigger: {
-        trigger: char, 
-        start: 'top 80%',
-        end: 'top 50%',
-        scrub: true
-      }, 
-      css: {
-        opacity: 0,
-      },
-      
-      stagger: 0.1
-    })
-  });
-
   const serviceTitle = document.querySelectorAll('.serv__item-title');
   serviceTitle.forEach((item) => {
     gsap.from(item, {
@@ -67,25 +49,6 @@ document.addEventListener('DOMContentLoaded', () => {
     })
   })
 
- const splitTypes = document.querySelectorAll('.reveal-type');
-  splitTypes.forEach((char,i) => {
-    const text = new SplitType(char, {  types: 'words, chars'})
-
-    gsap.from(text.chars, {
-      scrollTrigger: {
-        trigger: char, 
-        start: 'top 80%',
-        end: 'top 20%',
-        scrub: true
-      }, 
-      css: {
-        color: '#363839',
-      },
-      
-      stagger: 0.1
-    })
-  })
-  ///end text
 
   //skills animation
   gsap.to('.about .skills__item', {
@@ -100,7 +63,6 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     stagger: 0.1
   });
-
 
   function animateListItems(sections, listItemSelector) {
   sections.forEach(section => {
@@ -128,7 +90,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const laptopScreen = window.matchMedia('(min-width:768px)');
 
   if(laptopScreen.matches) {
-
   //Lenis Smooth scroll
     const lenis = new Lenis({
       duration: 1.2,
@@ -242,4 +203,48 @@ document.addEventListener('DOMContentLoaded', () => {
 
     scrollTrig();
   }  
+
+
+  const workTitle = document.querySelectorAll('.title-anim');
+  workTitle.forEach((item) => {
+    console.log(item);
+    const text = new SplitType(item, {types: 'words, chars'})
+
+    gsap.from(text.chars, {
+      scrollTrigger: {
+        trigger: item, 
+        start: 'top 80%',
+        end: 'top 50%',
+        scrub: true
+      }, 
+      css: {
+        opacity: 0,
+      },
+      
+      stagger: 0.1
+    })
+  });
+
+  
+
+ const splitTypes = document.querySelectorAll('.reveal-type');
+  splitTypes.forEach((char,i) => {
+    const text = new SplitType(char, {  types: 'words, chars'})
+
+    gsap.from(text.chars, {
+      scrollTrigger: {
+        trigger: char, 
+        start: 'top 80%',
+        end: 'top 20%',
+        scrub: true
+      }, 
+      css: {
+        color: '#363839',
+      },
+      
+      stagger: 0.1
+    })
+  })
+  ///end text
+
 });
