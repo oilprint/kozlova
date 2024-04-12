@@ -4,8 +4,6 @@ body {
 }
 
 body {
-  display: flex;
-  flex-direction: column;
   font-family: "Archivo",
     sans-serif;
   font-size: 18px;
@@ -20,24 +18,6 @@ body {
     height: 100%;
     width: 100%;
     overflow-y: hidden;
-  }
-}
-
-main {
-  flex-grow: 1;
-}
-
-.wrapper {
-  // position: relative;
-  overflow-x: hidden;
-  // height: 100vh;
-  // overflow-y: scroll;
-  background-color: red;
-  height: 200px;
-  width: 100%;
-
-  &.lock {
-    overflow: hidden;
   }
 }
 
