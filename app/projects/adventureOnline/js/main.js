@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
       768: {
         autoplay: {
           enabled: true,
-          delay: 3000,
+          delay: 2500,
           pauseOnMouseEnter: true,
         }
       }
