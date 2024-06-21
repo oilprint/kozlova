@@ -22,7 +22,6 @@ document.addEventListener('DOMContentLoaded', () => {
     wrapper.classList.remove('lock');
   });
 
-
   //modal
   const modalButton = document.querySelector('[data-modal-button]');
   const modalClosebutton = document.querySelector('[data-modal-close]');

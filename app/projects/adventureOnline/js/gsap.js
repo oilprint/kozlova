@@ -70,6 +70,10 @@ document.addEventListener('DOMContentLoaded', () => {
     })
 
 
+
+      
+
+
 	//resize window
 	// const debouncedResize = _.debounce(onWindowResize, 500);
 	// function onWindowResize() {
