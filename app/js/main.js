@@ -1,6 +1,10 @@
 
 document.addEventListener('DOMContentLoaded', () => {
- console.log("cursor1");
+  'use strict';
+
+
+
+
       //Mobile Menu
     const burger = document.querySelector('.header__mobile-btn');
 
@@ -21,29 +25,91 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // cursor custom start
 
-    let cursor = document.querySelector(".cursor"),
-        follower = document.querySelector(".cursor-follower");
-        console.log("cursor");
+//     let cursor = document.querySelector(".cursor"),
+//         follower = document.querySelector(".cursor-follower"),
+//         cursorScale = document.querySelectorAll('.work__photo-link')
+       
+
+//     let posX = 0,
+//         posY = 0,
+//         mouseX = 0,
+//         mouseY = 0;
+
+//     gsap.to({}, 0.016, {
+//         repeat: -1,
+//         onRepeat: function() {
+//             posX += (mouseX - posX) / 9;
+//             posY += (mouseY - posY) / 9;
+
+//             gsap.set(follower, {
+//                 css: {
+//                     left: posX - 20,
+//                     top: posY - 20
+//                 }
+//             });
+
+//             gsap.set(cursor, {
+//                 css: {
+//                     left: mouseX,
+//                     top: mouseY
+//                 }
+//             });
+//         }
+//     });
+
+//     window.addEventListener("mousemove", function (e) {
+//       mouseX = e.clientX;
+//       mouseY = e.clientY
+//     });
+
+
+//     cursorScale.forEach(link => {
+//     link.addEventListener('mouseleave', () => {
+//         cursor.classList.remove('grow');
+//         cursor.classList.remove('grow-small');
+//     });
+//     link.addEventListener('mousemove', () => {
+//         cursor.classList.add('grow');
+//         if(link.classList.contains('small')){
+//             cursor.classList.remove('grow');
+//             cursor.classList.add('grow-small');
+//         }
+//     });
+// });
+
+      // cursor custom end
+
+
+
+      //cursor2 start
+
+
+      function cursor() {
+
+        let cursor = document.querySelector(".cursor"),
+            follower = document.querySelector(".follow"),
+            cursorScale = document.querySelectorAll('.work__photo-link, .small')
+       
 
     let posX = 0,
         posY = 0,
         mouseX = 0,
         mouseY = 0;
 
-    TweenMax.to({}, 0.016, {
+    gsap.to({}, 0.016, {
         repeat: -1,
         onRepeat: function() {
             posX += (mouseX - posX) / 9;
             posY += (mouseY - posY) / 9;
 
-            TweenMax.set(follower, {
+            gsap.set(follower, {
                 css: {
                     left: posX - 20,
                     top: posY - 20
                 }
             });
 
-            TweenMax.set(cursor, {
+            gsap.set(cursor, {
                 css: {
                     left: mouseX,
                     top: mouseY
@@ -52,23 +118,80 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    document.addEventListener("mousemove", function(e) {
-        mouseX = e.pageX;
-        mouseY = e.pageY;
+    window.addEventListener("mousemove", function (e) {
+      mouseX = e.clientX;
+      mouseY = e.clientY
     });
 
-    document.querySelectorAll(".work__photo-link").forEach(function(img) {
-        img.addEventListener("mouseenter", function() {
-            cursor.classList.add("active");
-            follower.classList.add("active");
-        });
 
-        img.addEventListener("mouseleave", function() {
-            cursor.classList.remove("active");
-            follower.classList.remove("active");
-        });
+
+    cursorScale.forEach(link => {
+    link.addEventListener('mouseleave', () => {
+        cursor.classList.remove('active');
+        follower.classList.remove('active');
+        follower.classList.remove('active-small');
     });
-      // cursor custom end
+    link.addEventListener('mousemove', () => {
+       cursor.classList.add('active');
+       follower.classList.add('active');
+
+      if(link.classList.contains('small')){
+            follower.classList.remove('active');
+            follower.classList.add('active-small');
+        }
+    });
+});
+
+			// let cursor = $(".cursor"),
+			// 	follow = $(".follow"),
+			// 	posX = 0,
+			// 	posY = 0,
+			// 	mouseX = 0,
+			// 	mouseY = 0;
+
+			// gsap.to({}, 0.016, {
+			// 	repeat: -1,
+
+			// 	onRepeat: function () {
+
+			// 		posX += (mouseX - posX) / 7;
+			// 		posY += (mouseY - posY) / 7;
+
+			// 		gsap.set(cursor, {
+			// 			css: {
+			// 				left: mouseX - 5,
+			// 				top: mouseY - 5
+			// 			}
+			// 		})
+			// 		gsap.set(follow, {
+			// 			css: {
+			// 				left: posX - 15,
+			// 				top: posY - 15
+			// 			}
+			// 		})
+
+			// 	}
+
+			// });
+			// $(window).on('mousemove', function (e) {
+			// 	mouseX = e.clientX;
+			// 	mouseY = e.clientY;
+			// });
+
+			// $(".header__item").on("mouseenter", function () {
+			// 	cursor.addClass("active");
+			// 	follow.addClass("active");
+			// });
+			// $(".header__item").on("mouseleave", function () {
+			// 	cursor.removeClass("active");
+			// 	follow.removeClass("active");
+			// });
+
+		}
+		cursor();
+  
+
+//curcor2 end
 
 
     //smooth scroll
