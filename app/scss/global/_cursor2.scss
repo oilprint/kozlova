@@ -1,0 +1,82 @@
+.cursor {
+  z-index: 900;
+  display: flex;
+  position: fixed;
+  object-fit: fill;
+  border-radius: 20px;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: auto;
+  will-change: transform;
+  transform: scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+  transform-style: preserve-3d;
+  pointer-events: none;
+}
+
+.cursor__wrapp {
+  border-radius: 20px;
+  justify-content: center;
+  align-items: center;
+  width: 240px;
+  height: 240px;
+  display: flex;
+  position: absolute;
+}
+
+.cursor__box {
+  position: absolute;
+  z-index: 12;
+  justify-content: center;
+  width: auto;
+  height: auto;
+  display: block;
+  top: auto;
+  bottom: auto;
+  left: auto;
+  right: auto;
+}
+
+.cursor__box img {
+  vertical-align: middle;
+  max-width: 100%;
+  display: inline-block;
+  opacity: 0;
+  transition: opacity .4s cubic-bezier(0.75, -1.27, 0.3, 2.33);
+}
+
+.cursor__cycle {
+  z-index: 10;
+  position: absolute;
+  top: auto;
+  bottom: auto;
+  left: auto;
+  right: auto;
+  display: flex;
+  opacity: 1;
+  white-space: normal;
+  -webkit-text-fill-color: inherit;
+  mix-blend-mode: normal;
+  object-fit: fill;
+  background-color: #000;
+  background-clip: border-box;
+  border: 0 solid #000;
+  border-radius: 50%;
+  flex: none;
+  justify-content: center;
+  align-items: center;
+  width: 14px;
+  height: 14px;
+  margin: 0;
+  transition: height .4s cubic-bezier(0.75, -1.27, 0.3, 2.33),
+    width .4s cubic-bezier(0.75, -1.27, 0.3, 2.33);
+}
+
+.cursor.active .cursor__cycle {
+  width: 96px;
+  height: 96px;
+}
+
+.cursor.active .cursor__img {
+  opacity: 1;
+}
