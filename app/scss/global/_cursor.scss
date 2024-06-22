@@ -2,6 +2,8 @@
 .follow {
   position: fixed;
   pointer-events: none;
+
+  // mix-blend-mode: difference;
   transform: rotate(45deg);
   z-index: 9999;
 }
@@ -10,56 +12,175 @@
   width: 10px;
   height: 10px;
   background: $accent;
-  will-change: transform;
   transition: transform .4s cubic-bezier(.9, 0, .1, 1);
 
-  &.active {
-    transform: rotate(45deg) scale(0);
-  }
 }
 
 .follow {
   width: 30px;
   height: 30px;
   border: 2px solid rgba($accent, 0.3);
-  will-change: transform;
-  transform-style: preserve-3d;
   transition: border .4s cubic-bezier(.9, 0, .1, 1);
 
-  &.active {
-    border-color: transparent;
-
-    .follow__txt {
-      transform: translate(-50%, -50%) scale(1);
-    }
-  }
-
-  &.active-small {
+  &.cycle-active {
     border-radius: 50%;
-  }
-
-  &__txt {
-    position: absolute;
-    width: 300%;
-    height: 300%;
-    top: 50%;
-    left: 50%;
-    background-color: $accent;
-    border-radius: 50%;
-    transform: translate(-50%, -50%) scale(0);
-    color: $accent;
-    transition: opacity .4s cubic-bezier(0.75, -1.27, 0.3, 2.33),
-      transform .4s cubic-bezier(0.75, -1.27, 0.3, 2.33);
-    transition-delay: .1s;
-  }
-
-  &__info {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    font-size: 14px;
-    color: $light;
-    text-transform: uppercase;
-    transform: translate(-50%, -50%) rotate(-45deg);
   }
 }
+
+.cursor.active {
+  transform: rotate(45deg) scale(0);
+}
+
+.follow.active {
+  border-color: transparent;
+}
+
+.follow__txt {
+  position: absolute;
+  width: 300%;
+  height: 300%;
+  top: 50%;
+  left: 50%;
+  background-color: $accent;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  color: $accent;
+  transition: opacity .4s cubic-bezier(0.75, -1.27, 0.3, 2.33),
+    transform .4s cubic-bezier(0.75, -1.27, 0.3, 2.33);
+  transition-delay: .1s;
+}
+
+.follow.active .follow__txt {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.follow__txt div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 14px;
+  color: $light;
+  text-transform: uppercase;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+
+// cursor gsap difference
+// .cursor {
+//   position: fixed;
+//   width: 8px;
+//   height: 8px;
+//   // margin-left: -20px;
+//   // margin-top: -20px;
+//   border-radius: 50%;
+//   background-color: $accent;
+//   // border: 2px solid #16a085;
+//   transition: transform .3s ease;
+//   transform-origin: center center;
+//   pointer-events: none;
+//   z-index: 1000;
+// }
+
+// .grow,
+// .grow-small {
+//   transform: scale(10);
+//   background: #fff;
+//   mix-blend-mode: difference;
+//   border: none;
+// }
+
+// .grow-small {
+//   transform: scale(2.5);
+// }
+
+// .cursor-follower {
+//   position: absolute;
+//   width: 40px;
+//   height: 40px;
+//   background-color: rgba($accent, 0.3);
+//   border-radius: 50%;
+//   z-index: 999;
+//   transition: transform 0.2s ease;
+// }
+
+// cursor gsap difference end
+
+
+
+
+
+// .cursor {
+
+//   z-index: 900;
+//   background: $accent;
+//   width: 8px;
+//   height: 8px;
+//   border-radius: 100%;
+//   will-change: transform;
+//   -webkit-transform: translateZ(0);
+//   transform: scale(1);
+//   transition: 0.5s cubic-bezier(0.75, -1.27, 0.3, 2.33) transform,
+//     0.2s cubic-bezier(0.75, -1.27, 0.3, 2.33) opacity;
+
+//   @media (max-width: 1200px) {
+//     display: none;
+//   }
+// }
+
+
+// .cursor::before {
+//   content: "";
+//   width: 100%;
+//   height: 100%;
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   display: block;
+
+//   background-image: url("../images/cursor-png.png");
+//   background-position: center;
+//   background-repeat: no-repeat;
+//   background-size: cover;
+//   border-radius: 100%;
+//   opacity: 0;
+
+//   @media (max-width: 1200px) {
+//     display: none;
+//   }
+// }
+
+
+// .cursor-follower {
+//   position: absolute;
+//   width: 40px;
+//   height: 40px;
+//   background-color: rgba($accent, 0.3);
+//   border-radius: 50%;
+//   z-index: 999;
+//   transition: transform 0.2s ease;
+// }
+
+// .cursor,
+// .cursor-follower {
+//   position: absolute;
+//   user-select: none;
+//   pointer-events: none;
+// }
+
+
+// .cursor.active {
+//   opacity: 1;
+//   width: 96px;
+//   height: 96px;
+// }
+
+// .cursor.active::before {
+//   opacity: 1;
+// }
+
+
+// .cursor-follower.active {
+//   opacity: 0.3;
+//   -webkit-transform: scale(0);
+//   transform: scale(0);
+// }
