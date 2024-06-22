@@ -30,6 +30,8 @@ document.addEventListener('DOMContentLoaded', () => {
         follower = document.querySelector(".follow"),
         cursorScale = document.querySelectorAll(".hover-scale"),
         cursorCycle = document.querySelectorAll(".hover-cycle")
+
+        console.log(cursorScale);
             
     let posX = 0,
         posY = 0,
@@ -63,12 +65,8 @@ document.addEventListener('DOMContentLoaded', () => {
       mouseY = e.clientY
     });
 
-
-
     cursorScale.forEach(link => {
-      
-      link.addEventListener('mouseenter', () => {
-        link.classList.add('active')
+      link.addEventListener('mousemove', () => {
         cursor.classList.add('active');
         follower.classList.add('active');
       });
