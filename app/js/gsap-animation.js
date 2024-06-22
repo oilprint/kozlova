@@ -206,7 +206,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const workTitle = document.querySelectorAll('.title-anim');
   workTitle.forEach((item) => {
-    console.log(item);
     const text = new SplitType(item, {types: 'words, chars'})
 
     gsap.from(text.chars, {

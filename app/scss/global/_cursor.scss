@@ -2,7 +2,6 @@
 .follow {
   position: fixed;
   pointer-events: none;
-
   transform: rotate(45deg);
   z-index: 9999;
 }
@@ -13,18 +12,13 @@
   background: $accent;
   transition: height .4s cubic-bezier(0.75, -1.27, 0.3, 2.33),
     width .4s cubic-bezier(0.75, -1.27, 0.3, 2.33);
-  ;
 }
 
 .follow {
   width: 30px;
   height: 30px;
   border: 2px solid rgba($accent, 0.3);
-  transition: border-radius .4s cubic-bezier(.9, 0, .1, 1);
-
-  &.cycle-active {
-    border-radius: 50%;
-  }
+  transition: border .4s cubic-bezier(0.75, -1.27, 0.3, 2.33);
 }
 
 .cursor.active {
@@ -33,6 +27,11 @@
 }
 
 .follow.active {
+  border-color: transparent;
+
+}
+
+.follow.cycle-active {
   border-radius: 50%;
 }
 
@@ -42,12 +41,12 @@
   height: 1px;
   top: 50%;
   left: 50%;
-  background-color: $accent;
-  border-radius: 50%;
   transform: translate(-50%, -50%);
-  color: $accent;
+  background: $accent;
   opacity: 0;
-  transition: opacity .4s cubic-bezier(0.75, -1.27, 0.3, 2.33), height .4s cubic-bezier(0.75, -1.27, 0.3, 2.33),
+  border-radius: 50%;
+  transition: opacity .4s cubic-bezier(0.75, -1.27, 0.3, 2.33),
+    height .4s cubic-bezier(0.75, -1.27, 0.3, 2.33),
     width .4s cubic-bezier(0.75, -1.27, 0.3, 2.33);
   transition-delay: .1s;
 }
@@ -56,15 +55,14 @@
   width: 90px;
   height: 90px;
   opacity: 1;
-  // transform: translate(-50%, -50%) scale(1);
 }
 
 .follow__txt div {
   position: absolute;
   top: 50%;
   left: 50%;
-  text-align: center;
   font-size: 12px;
+  text-align: center;
   color: $light;
   text-transform: uppercase;
   transform: translate(-50%, -50%) rotate(-45deg);
