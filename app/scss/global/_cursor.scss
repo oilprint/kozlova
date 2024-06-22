@@ -1,134 +1,65 @@
 .cursor,
-.cursor-follower {
-  backface-visibility: hidden;
-  will-change: transform;
+.follow {
+  position: fixed;
+  pointer-events: none;
+  transform: rotate(45deg);
+  z-index: 9999;
 }
 
 .cursor {
-  backface-visibility: hidden;
-  will-change: transform;
-  -webkit-transform: translateZ(0);
-  position: absolute;
+  width: 10px;
+  height: 10px;
   background: $accent;
-  width: 8px;
-  height: 8px;
-  border-radius: 100%;
-  z-index: 900;
-  transition: 0.5s cubic-bezier(0.75, -1.27, 0.3, 2.33) transform,
-    0.2s cubic-bezier(0.75, -1.27, 0.3, 2.33) opacity;
-  user-select: none;
-  pointer-events: none;
-  transform: scale(0.8);
-  font-size: 5px;
-
-  @media (max-width: 1200px) {
-    display: none;
-  }
-
-}
-
-.cursor::before {
-  content: "";
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  text-align: center;
-  font-weight: 500;
-  top: 0;
-  left: 0;
-  display: block;
-  font-size: 5px;
-
-  // background-image: url("../images/cursor-png.png");
-  // background-position: center;
-  // background-repeat: no-repeat;
-  // background-size: cover;
-  // border-radius: 100%;
-  // opacity: 0;
-
-  @media (max-width: 1200px) {
-    display: none;
-  }
-}
-
-.cursor.active {
-  opacity: 1;
-
-  -webkit-transform: scale(12);
-  transform: scale(12);
-
-}
-
-.cursor.active::before {
-  opacity: 1;
-}
-
-.cursor-follower {
-  backface-visibility: hidden;
   will-change: transform;
-  -webkit-transform: translateZ(0);
+  transition: transform .4s cubic-bezier(.9, 0, .1, 1);
 
-  position: absolute;
-  background: rgba($accent, 0.1);
-  width: 40px;
-  height: 40px;
-  border-radius: 100%;
-  z-index: 900;
-  transition: 0.6s cubic-bezier(0.75, -1.27, 0.3, 2.33) transform,
-    0.4s cubic-bezier(0.75, -1.27, 0.3, 2.33) opacity;
-  user-select: none;
-  pointer-events: none;
-  transform: translate(4px, 4px);
+  &.active {
+    transform: rotate(45deg) scale(0);
+  }
 }
 
-.cursor-follower.active {
-  opacity: 0.3;
-  -webkit-transform: scale(0);
-  transform: scale(0);
-}
+.follow {
+  width: 30px;
+  height: 30px;
+  border: 2px solid rgba($accent, 0.3);
+  will-change: transform;
+  transform-style: preserve-3d;
+  transition: border .4s cubic-bezier(.9, 0, .1, 1);
 
-.portfolio-thumb {
-  overflow: hidden;
-  transition: all 0.5s cubic-bezier(0.25, 1, 0.3, 1);
-}
+  &.active {
+    border-color: transparent;
 
-.portfolio-thumb img {
-  max-width: 360px;
-  opacity: 0.4;
-  transition: all 0.5s cubic-bezier(0.25, 1, 0.3, 1);
-  transform-origin: 90% center;
-}
+    .follow__txt {
+      transform: translate(-50%, -50%) scale(1);
+    }
+  }
 
-.portfolio-item:hover .portfolio-thumb {
-  transform: translateX(-1.75rem);
-}
+  &.active-small {
+    border-radius: 50%;
+  }
 
-.portfolio-item:hover .portfolio-thumb img {
-  opacity: 0.8;
-  transform: scale(1.2);
-}
+  &__txt {
+    position: absolute;
+    width: 300%;
+    height: 300%;
+    top: 50%;
+    left: 50%;
+    background-color: $accent;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    color: $accent;
+    transition: opacity .4s cubic-bezier(0.75, -1.27, 0.3, 2.33),
+      transform .4s cubic-bezier(0.75, -1.27, 0.3, 2.33);
+    transition-delay: .1s;
+  }
 
-
-.div-block-26 {
-  z-index: 12;
-
-  width: auto;
-  height: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  // top: auto;
-  // bottom: auto;
-}
-
-.div-block-26 img {
-  vertical-align: middle;
-  width: 100%;
-  display: inline-block;
-
-  overflow-clip-margin: content-box;
-  overflow: clip;
+  &__info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 14px;
+    color: $light;
+    text-transform: uppercase;
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
 }
