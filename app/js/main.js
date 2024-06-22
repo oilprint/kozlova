@@ -84,12 +84,12 @@ document.addEventListener('DOMContentLoaded', () => {
       //cursor2 start
 
 
-      function cursor() {
+  function cursor() {
 
         let cursor = document.querySelector(".cursor"),
             follower = document.querySelector(".follow"),
-            cursorScale = document.querySelectorAll('.work__photo-link, .small')
-       
+            cursorScale = document.querySelectorAll(".work__photo-link"),
+            cursorCycle =document.querySelectorAll(".hover-cycle")
 
     let posX = 0,
         posY = 0,
@@ -126,21 +126,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     cursorScale.forEach(link => {
-    link.addEventListener('mouseleave', () => {
-        cursor.classList.remove('active');
-        follower.classList.remove('active');
-        follower.classList.remove('active-small');
+      link.addEventListener('mouseleave', () => {
+          cursor.classList.remove('active');
+          follower.classList.remove('active');
+      });
+      link.addEventListener('mousemove', () => {
+        cursor.classList.add('active');
+        follower.classList.add('active');
+      });
     });
-    link.addEventListener('mousemove', () => {
-       cursor.classList.add('active');
-       follower.classList.add('active');
 
-      if(link.classList.contains('small')){
-            follower.classList.remove('active');
-            follower.classList.add('active-small');
-        }
+    cursorCycle.forEach(link => {
+      link.addEventListener('mouseleave', () => {
+          cursor.classList.remove('active');
+          follower.classList.remove('cycle-active');
+      });
+      link.addEventListener('mousemove', () => {
+        cursor.classList.add('active');
+        follower.classList.add('cycle-active');
+      });
     });
-});
 
 			// let cursor = $(".cursor"),
 			// 	follow = $(".follow"),
