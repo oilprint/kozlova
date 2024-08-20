@@ -4,6 +4,10 @@
   pointer-events: none;
   transform: rotate(45deg);
   z-index: 9999;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 }
 
 .cursor {
