@@ -75,7 +75,7 @@ body {
 
   &__text {
     font-size: 64px;
-    font-weight: 700;
+    font-weight: 600;
     color: $dark-grey;
     margin-bottom: -10px;
 
@@ -128,6 +128,11 @@ body {
       font-size: 60px;
     }
   }
+}
+
+.stop-anim {
+  height: 1px;
+  margin-top: 1px;
 }
 
 .work-card {

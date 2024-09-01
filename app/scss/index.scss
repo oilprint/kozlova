@@ -5,6 +5,7 @@
 @import 'global/vars';
 @import 'global/global';
 @import 'global/ints';
+@import 'global/gsap';
 
 @import 'lego/header';
 @import 'lego/hero';
@@ -13,5 +14,5 @@
 @import 'lego/decor';
 @import 'lego/services';
 @import 'lego/react-app';
-@import 'global/gsap';
+@import 'lego/projects';
 @import 'lego/footer';
