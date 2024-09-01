@@ -148,6 +148,7 @@ document.addEventListener('DOMContentLoaded', () => {
             trigger: section,
             start: 'bottom bottom',
             end: 'bottom top',
+            endTrigger: ".stop-anim",
             scrub: true,
             snap: true
           },
@@ -159,11 +160,11 @@ document.addEventListener('DOMContentLoaded', () => {
       gsap.to('.title__w', {
         scrollTrigger: {
           trigger: '.work',
-          start: 'top center',
+          start: 'top 60%',
           end: 'bottom top',
           scrub: true
         },
-        xPercent: 20,
+        xPercent: 40,
         ease: 'none'
       });
 
@@ -201,7 +202,22 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     scrollTrig();
-  }  
+  } 
+  
+  function titleWorksAnim() {
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.to('.title__r', {
+        scrollTrigger: {
+          trigger: '.projects',
+          start: 'top 60%',
+          end: 'bottom top',
+          scrub: true
+        },
+        xPercent: 20,
+        ease: 'none'
+      });
+  }
+  titleWorksAnim();
 
 
   const workTitle = document.querySelectorAll('.title-anim');
