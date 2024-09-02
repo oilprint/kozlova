@@ -203,6 +203,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
     scrollTrig();
   } 
+  function marq() {
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.to('.hero__marq-wrapp', {
+			scrollTrigger: {
+				trigger: '.projects',
+				start: 'top bottom',
+				scrub: 1.9
+			},
+			xPercent: -50
+		})
+  }
+  marq();
   
   function titleWorksAnim() {
     gsap.registerPlugin(ScrollTrigger);
