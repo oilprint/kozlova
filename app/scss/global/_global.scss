@@ -3,6 +3,8 @@
 @import 'global/ints';
 @import 'global/cursor';
 
+
+
 html,
 body {
   height: 100%;
@@ -45,6 +47,9 @@ body {
     padding: 40px 0;
   }
 }
+
+@import 'lego/header';
+@import 'lego/footer';
 
 .footer-bottom {
   width: 100%;

@@ -72,6 +72,9 @@
     display: block;
     width: 30%;
     padding-left: -10vw;
+    border-radius: 12px;
+    overflow: hidden;
+
 
     @media (max-width: 768px) {
       width: 60%;
