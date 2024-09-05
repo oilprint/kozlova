@@ -71,6 +71,8 @@
   }
 
   &__text {
+    position: relative;
+    z-index: 5;
     width: 100%;
     font-family: "Tenor Sans",
       sans-serif;

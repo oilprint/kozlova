@@ -1,115 +1,285 @@
-.projects {
+.horizontal-items {
   position: relative;
-  z-index: 3;
-  padding-bottom: 100px;
-  background-color: $light;
+  padding-bottom: 120px;
+  padding-top: 40px;
 
   @media (max-width: 768px) {
-    padding-bottom: 70px;
+    padding-bottom: 60px;
+    padding-top: 20px;
   }
 
-  &__wrapper {
-    position: relative;
+  @media (max-width: 576px) {
+    padding-bottom: 60px;
+    padding-top: 0;
+  }
+}
 
+.marq {
 
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  position: relative;
+
+  &::before {
+    position: absolute;
+    z-index: 0;
+    display: inline-block;
+    content: "projects";
+    text-transform: uppercase;
+    bottom: -90px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-family: "Archivo",
+      sans-serif;
+    font-weight: 700;
+    font-size: 220px;
+    line-height: 1;
+    color: $light-grey;
+  }
+
+  @media (max-width: 1440px) {
     &::before {
-      position: absolute;
-      z-index: 0;
-      display: inline-block;
-      content: "react app";
-      text-transform: uppercase;
-      bottom: -90px;
-      left: 0;
-      right: 0;
-      text-align: center;
-      font-family: "Archivo",
-        sans-serif;
-      font-weight: 700;
-      font-size: 220px;
-      line-height: 1;
-      color: $light-grey;
-    }
-
-    @media (max-width: 1440px) {
-      &::before {
-        font-size: calc(56px + (220 - 56) * ((100vw - 375px) / (1440 - 375)));
-        bottom: -50px;
-      }
-    }
-
-    @media (max-width: 768px) {
-      &::before {
-        bottom: 0;
-      }
+      font-size: calc(62px + (220 - 62) * ((100vw - 375px) / (1440 - 375)));
+      bottom: calc(-90px + 9vw);
     }
   }
 
-  &__title {
-    margin-bottom: 10px;
-
-    @media (max-width: 768px) {
-      margin-bottom: 30px;
-    }
-
-    @media (max-width: 480px) {
-      margin-bottom: 20px;
-    }
+  @media (max-width: 768px) {
+    gap: 20px;
   }
 
-  &__list22 {
-    position: relative;
+  &__wrapp {
     display: flex;
-    z-index: 5;
     gap: 30px;
+    width: 100%;
+    height: auto;
 
-  }
-
-
-  &__list {
-    position: relative;
-    z-index: 3;
-    display: flex;
-    gap: 50px;
-
-    justify-content: space-between;
+    &--2 {
+      margin-left: -50%;
+    }
 
     @media (max-width: 768px) {
-      flex-wrap: wrap;
-      gap: 30px;
-      row-gap: 50px;
+      gap: 20px;
     }
   }
 
-  &__link {
+  &__item {
+    position: relative;
+    flex: 0 0 auto;
     display: block;
-    max-width: 690px;
-    width: 100%;
-    overflow: hidden;
-    border-radius: 20px;
-    margin-bottom: 20px;
-    transition: outline 0.3s ease-in, opacity 0.3s ease;
+    width: 30%;
+    padding-left: -10vw;
 
-    &:focus {
-      outline: solid 1px $accent;
-      outline-offset: 2px;
+    @media (max-width: 768px) {
+      width: 60%;
     }
 
-    &:hover {
-      .react__img {
-        transform: scale(1.2);
-      }
-    }
-
-    &:active {
-      opacity: 0.7;
-    }
   }
+
 
   &__img {
-    object-fit: cover;
-    transition: transform 0.3s ease-in;
-
-    height: auto;
+    display: block;
+    width: 100%;
+    height: 100%;
   }
-
 }
+
+
+
+// .projects {
+//   position: relative;
+//   z-index: 3;
+//   padding-bottom: 100px;
+//   background-color: $light;
+
+//   @media (max-width: 768px) {
+//     padding-bottom: 70px;
+//   }
+
+//   &__wrapper {
+//     position: relative;
+
+
+//     &::before {
+//       position: absolute;
+//       z-index: 0;
+//       display: inline-block;
+//       content: "react app";
+//       text-transform: uppercase;
+//       bottom: -90px;
+//       left: 0;
+//       right: 0;
+//       text-align: center;
+//       font-family: "Archivo",
+//         sans-serif;
+//       font-weight: 700;
+//       font-size: 220px;
+//       line-height: 1;
+//       color: $light-grey;
+//     }
+
+//     @media (max-width: 1440px) {
+//       &::before {
+//         font-size: calc(56px + (220 - 56) * ((100vw - 375px) / (1440 - 375)));
+//         bottom: -50px;
+//       }
+//     }
+
+//     @media (max-width: 768px) {
+//       &::before {
+//         bottom: 0;
+//       }
+//     }
+//   }
+
+//   &__title {
+//     margin-bottom: 10px;
+
+//     @media (max-width: 768px) {
+//       margin-bottom: 30px;
+//     }
+
+//     @media (max-width: 480px) {
+//       margin-bottom: 20px;
+//     }
+//   }
+
+//   &__list22 {
+//     position: relative;
+//     display: flex;
+//     z-index: 5;
+//     gap: 30px;
+
+//   }
+
+
+//   &__list {
+//     position: relative;
+//     z-index: 3;
+//     display: flex;
+//     gap: 50px;
+
+//     justify-content: space-between;
+
+//     @media (max-width: 768px) {
+//       flex-wrap: wrap;
+//       gap: 30px;
+//       row-gap: 50px;
+//     }
+//   }
+
+//   &__link {
+//     display: block;
+//     max-width: 690px;
+//     width: 100%;
+//     overflow: hidden;
+//     border-radius: 20px;
+//     margin-bottom: 20px;
+//     transition: outline 0.3s ease-in, opacity 0.3s ease;
+
+//     &:focus {
+//       outline: solid 1px $accent;
+//       outline-offset: 2px;
+//     }
+
+//     &:hover {
+//       .react__img {
+//         transform: scale(1.2);
+//       }
+//     }
+
+//     &:active {
+//       opacity: 0.7;
+//     }
+//   }
+
+//   &__img {
+//     object-fit: cover;
+//     transition: transform 0.3s ease-in;
+
+//     height: auto;
+//   }
+
+// }
+
+// .horizontal-items {
+//   overflow: hidden;
+
+//   &__container {
+//     margin: 0 auto;
+//     transform: rotate(0deg);
+//   }
+
+//   &__row {
+//     width: 120vw;
+//     left: -10vw;
+//     will-change: transform;
+//     display: flex;
+//     // flex-wrap: wrap;
+//     position: relative;
+//   }
+
+//   &__flex-col {
+//     width: 33%;
+//     padding: 1.25vw;
+//     will-change: transform;
+
+//     &:nth-child(4) {
+//       display: block;
+//     }
+
+//     @media screen and (max-width: 1000px) {
+//       width: 33.333%;
+
+//       &:nth-child(4) {
+//         display: none;
+//       }
+//     }
+//   }
+// }
+
+
+// @media screen and (max-width: 540px) {
+
+
+//   .horizontal-items .flex-col {
+//     width: 50%;
+//     padding: 2.5vw;
+//   }
+
+//   .horizontal-items .flex-col:nth-child(4) {
+//     display: block;
+//   }
+
+//   .horizontal-items .row {
+//     width: 120vw;
+//   }
+
+//   .horizontal-items .row.row-1,
+//   .horizontal-items .row.row-2 {
+//     transform: translate(0, 0) !important;
+//   }
+
+//   .horizontal-items .row-1 .flex-col:nth-child(3),
+//   .horizontal-items .row-1 .flex-col:nth-child(4) {
+//     transform: translate(-20vw, 0);
+//   }
+
+//   .horizontal-items .row-2 .flex-col:nth-child(3),
+//   .horizontal-items .row-2 .flex-col:nth-child(4) {
+//     display: none;
+//   }
+
+//   .horizontal-items .container {
+//     display: none;
+//     opacity: 0;
+//     visibility: hidden;
+//   }
+
+//   .horizontal-items {
+//     padding-top: 0;
+//   }
+// }

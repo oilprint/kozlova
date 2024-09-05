@@ -178,46 +178,12 @@ document.addEventListener('DOMContentLoaded', () => {
         xPercent: 20,
         ease: 'none'
       });
-      gsap.to('.serv__item:nth-child(1)', {
-        scrollTrigger: {
-          trigger: '.serv',
-          start: 'top top',
-          end: 'bottom top',
-          scrub: true
-        },
-        xPercent: -20,
-        ease: 'none'
-      });
-
-      gsap.to('.serv__item:nth-child(3)', {
-        scrollTrigger: {
-          trigger: '.serv',
-          start: 'top top',
-          end: 'bottom top',
-          scrub: true
-        },
-        xPercent: 20,
-        ease: 'none'
-      });
     }
 
     scrollTrig();
-  } 
-  function marq() {
-    gsap.registerPlugin(ScrollTrigger);
-
-    gsap.to('.hero__marq-wrapp', {
-			scrollTrigger: {
-				trigger: '.projects',
-				start: 'top bottom',
-				scrub: 1.9
-			},
-			xPercent: -50
-		})
-  }
-  marq();
+  };
   
-  function titleWorksAnim() {
+  function titleAnim() {
     gsap.registerPlugin(ScrollTrigger);
     gsap.to('.title__r', {
         scrollTrigger: {
@@ -228,9 +194,19 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         xPercent: 20,
         ease: 'none'
+      })
+    gsap.to('.title-s', {
+        scrollTrigger: {
+          trigger: '.serv',
+          start: 'top 60%',
+          end: 'bottom top',
+          scrub: true
+        },
+        xPercent: 20,
+        ease: 'none'
       });
   }
-  titleWorksAnim();
+  titleAnim();
 
 
   const workTitle = document.querySelectorAll('.title-anim');
