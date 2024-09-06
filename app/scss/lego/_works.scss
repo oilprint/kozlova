@@ -1,6 +1,7 @@
 .works {
   position: relative;
   z-index: 3;
+  padding-top: 50px;
   padding-bottom: 100px;
   background-color: $light;
 
@@ -43,17 +44,25 @@
     }
   }
 
-  &__title {
-    margin-bottom: 10px;
+  &__title-h1 {
+    margin-bottom: 20px;
+  }
 
-    @media (max-width: 768px) {
-      margin-bottom: 30px;
-    }
+  &__headline {
+    margin-bottom: -10px;
 
     @media (max-width: 480px) {
-      margin-bottom: 20px;
+      margin-bottom: -4px;
     }
   }
+
+  &__fiters-btn {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+
 
   &__list {
     position: relative;
@@ -85,7 +94,7 @@
     }
 
     &:hover {
-      .react__img {
+      .works__img {
         transform: scale(1.2);
       }
     }
