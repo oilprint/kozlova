@@ -91,25 +91,49 @@ document.addEventListener('DOMContentLoaded', () => {
 	cursor();
   
 
-//curcor2 end
+  //curcor2 end
 
 
-    //smooth scroll
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-          e.preventDefault(); // Отмена действия по умолчанию
+  //smooth scroll
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault(); // Отмена действия по умолчанию
 
-          const targetId = this.getAttribute('href').substring(1); // Получение ID целевого элемента
+        const targetId = this.getAttribute('href').substring(1); // Получение ID целевого элемента
 
-          bodyLock.classList.remove('lock');
-          mobileMenu.classList.remove('mobile-menu--active'); 
+        bodyLock.classList.remove('lock');
+        mobileMenu.classList.remove('mobile-menu--active'); 
 
-          // Плавная прокрутка к якорю
-          document.getElementById(targetId).scrollIntoView({
-              behavior: 'smooth' // Плавный скроллинг
-          });
-      });
+        // Плавная прокрутка к якорю
+        document.getElementById(targetId).scrollIntoView({
+            behavior: 'smooth' // Плавный скроллинг
+        });
     });
+  });
+
+  //margue
+  function marquee() {
+    gsap.to('.marq__wrapp--1', {
+			scrollTrigger: {
+				trigger: '.horizontal-items',
+				start: 'top bottom',
+				scrub: 2.4
+			},
+			xPercent: -30
+		})
+    gsap.to('.marq__wrapp--2', {
+			scrollTrigger: {
+				trigger: '.marq__wrapp--2',
+				start: 'top bottom',
+				scrub: 1.9
+			},
+			xPercent: 40
+		})
+  };
+  marquee();
+
+
+
 });
 
 

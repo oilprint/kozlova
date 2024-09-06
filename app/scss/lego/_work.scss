@@ -41,7 +41,7 @@
     justify-content: start;
     padding-top: 10vh;
 
-    &:not(:first-child) {
+    &:not(:last-child) {
       padding: 15vh 0;
 
       @media (max-width: 768px) {
@@ -111,7 +111,7 @@
     width: 100%;
     height: 100%;
     cursor: pointer;
-    border-radius: 20px;
+    border-radius: 12px;
     overflow: hidden;
   }
 
