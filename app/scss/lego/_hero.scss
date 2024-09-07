@@ -24,33 +24,15 @@
   }
 
   &__headline {
-    display: block;
-    font-family: "Tenor Sans",
-      sans-serif;
-    font-size: 140px;
-    line-height: 1;
-    color: $accent;
     margin-bottom: -10px;
-
-    @media (max-width: 1440px) {
-      font-size: calc(52px + (140 - 52) * ((100vw - 375px) / (1440 - 375)));
-    }
 
     @media (max-width: 480px) {
       margin-bottom: -4px;
     }
   }
 
-  &__title {
-    font-size: 210px;
-    font-weight: 700;
-    line-height: 1;
-    text-transform: uppercase;
+  &__title-h1 {
     margin-bottom: 8px;
-
-    @media (max-width: 1440px) {
-      font-size: calc(52px + (210 - 52) * ((100vw - 375px) / (1440 - 375)));
-    }
   }
 
   &__bottom {

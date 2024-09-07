@@ -57,9 +57,9 @@ document.addEventListener('DOMContentLoaded', () => {
   //swiper
 
   const swiper1 = new Swiper('.swiper-1', {
-    speed: 1500,
+    speed: 2000,
     loop: true,
-    grabCursor: true,
+    grabCursor: false,
     pagination: {
           el: ".swiper-pagination",
           clickable: true,

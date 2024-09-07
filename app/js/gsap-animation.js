@@ -70,8 +70,8 @@ document.addEventListener('DOMContentLoaded', () => {
       gsap.to(item, {
         scrollTrigger: {
           trigger: section,
-          start: 'center 60%',
-          end: 'bottom 20%',
+          start: 'center 80%',
+          end: 'bottom 50%',
           scrub: true
         },
         css: {

@@ -15,7 +15,6 @@
 }
 
 .marq {
-
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -74,19 +73,38 @@
     padding-left: -10vw;
     border-radius: 12px;
     overflow: hidden;
-
+    transition: outline;
 
     @media (max-width: 768px) {
       width: 60%;
     }
 
+    &:focus {
+      outline: solid 1px $accent;
+      outline-offset: 4px;
+    }
+
+    &:hover {
+      outline: solid 1px rgba($grey, 0.4);
+
+      .marq__img {
+        transform: scale(1.05);
+      }
+    }
+
+    &:active {
+      outline: solid 1px $accent;
+
+    }
+
   }
 
-
   &__img {
+    object-fit: cover;
     display: block;
     width: 100%;
     height: 100%;
+    transition: transform 0.3s ease;
   }
 }
 

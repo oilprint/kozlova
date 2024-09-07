@@ -1,6 +1,7 @@
 .works {
   position: relative;
   z-index: 3;
+  padding-top: 50px;
   padding-bottom: 100px;
   background-color: $light;
 
@@ -43,30 +44,61 @@
     }
   }
 
-  &__title {
-    margin-bottom: 10px;
+  &__title-h1 {
+    margin-bottom: 20px;
+  }
 
-    @media (max-width: 768px) {
-      margin-bottom: 30px;
-    }
+  &__headline {
+    margin-bottom: -10px;
 
     @media (max-width: 480px) {
-      margin-bottom: 20px;
+      margin-bottom: -4px;
     }
   }
+
+  &__fiters-btn {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+
 
   &__list {
     position: relative;
     z-index: 3;
-    display: flex;
-    gap: 50px;
+    // display: flex;
+    // gap: 50px;
+    // justify-content: space-between;
+    // flex-wrap: wrap;
 
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 50px;
+    grid-row-gap: 50px;
 
     @media (max-width: 768px) {
       flex-wrap: wrap;
       gap: 30px;
       row-gap: 50px;
+    }
+  }
+
+  &__item {
+    &.hide {
+      opacity: 0;
+      pointer-events: none;
+      position: absolute;
+      width: 0;
+      height: 0;
+      overflow: hidden;
+      transition-delay: 0.5s;
+    }
+
+    &.show {
+      opacity: 1;
+      transition: opacity 0.5s ease-in-out;
     }
   }
 
@@ -85,7 +117,7 @@
     }
 
     &:hover {
-      .react__img {
+      .works__img {
         transform: scale(1.2);
       }
     }
