@@ -5,7 +5,7 @@
   padding-bottom: 100px;
   background-color: $light;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1024px) {
     padding-bottom: 70px;
     padding-top: 0;
   }
@@ -45,14 +45,46 @@
     }
   }
 
-  &__title-h1 {
+  &__top {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+    row-gap: 0;
     margin-bottom: 20px;
+
+    @media (max-width: 768px) {
+      margin-bottom: 8px;
+    }
+
+    @media (max-width: 576px) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__title-h1 {
+    font-size: 150px;
+
+    @media (max-width: 576px) {
+      font-size: 120px;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 90px;
+    }
   }
 
   &__headline {
+    font-size: 100px;
     margin-bottom: -10px;
 
+    @media (max-width: 576px) {
+      font-size: 80px;
+    }
+
     @media (max-width: 480px) {
+      font-size: 60px;
       margin-bottom: -4px;
     }
   }
@@ -61,15 +93,15 @@
     display: flex;
     align-items: center;
     gap: 16px;
-    margin-bottom: 40px;
+    margin-bottom: 24px;
     flex-wrap: wrap;
-  }
 
-  &__item {
-    @media (max-width: 768px) {
-      max-width: 576px;
-      width: 100%;
-      margin: 0 auto;
+    @media (max-width: 576px) {
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      overflow-y: scroll;
+      padding-bottom: 10px;
+      -webkit-padding-bottom: 10px;
     }
   }
 
@@ -77,27 +109,39 @@
     position: relative;
     z-index: 3;
     width: 100%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 50px;
-    grid-row-gap: 50px;
+    display: flex;
+
+    flex-wrap: wrap;
+
+    column-gap: 50px;
+    row-gap: 50px;
 
     @media (max-width: 1024px) {
-      flex-wrap: wrap;
       gap: 30px;
       row-gap: 50px;
     }
 
     @media (max-width: 768px) {
-      grid-template-columns: repeat(1, 1fr);
-    }
-
-    @media (max-width: 576px) {
-      row-gap: 30px;
+      gap: 30;
     }
   }
 
+
   &__item {
+    width: calc((100% - 50px) / 2);
+
+    @media (max-width: 1024px) {
+      width: calc((100% - 30px) / 2);
+    }
+
+    @media (max-width: 768px) {
+      max-width: 540px;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+
+
     &.hide {
       opacity: 0;
       pointer-events: none;

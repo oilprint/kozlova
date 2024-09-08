@@ -49,7 +49,7 @@
 
       <ul class="header__list">
         <li class="header__item">
-          <a href="works.html" class="header__item-link hover-cycle">Works</a>
+          <a href="works.html" class="header__item-link hover-cycle">Work</a>
         </li>
         <li class="header__item">
           <a href="#footer" class="header__item-link hover-cycle">Contact</a>
@@ -114,58 +114,61 @@
     <section class="section works">
   <div class="container">
     <div class="works__wrapper">
-      <div class="works__title">
-        <span class="headline works__headline">
-          Latest
-        </span>
-        <h1 class="title-h1 works__title-h1">Work</h1>
-        <!-- <p class="title__text title__r">
+      <div class="works__top">
+        <div class="works__title">
+          <span class="headline works__headline">
+            Latest
+          </span>
+          <h1 class="title-h1 works__title-h1">Work</h1>
+          <!-- <p class="title__text title__r">
           Latest
         </p>
         <h2 class="title__headline">
           Work
         </h2> -->
-      </div>
-      <div class="works__fiters-btn">
-        <button class=" fiters-btn button button--secondary" type="button" data-filter="all">
-          All
-        </button>
-        <!-- <button class=" fiters-btn button button--secondary" type="button" data-filter="development">
+        </div>
+        <div class="works__fiters-btn">
+          <button class=" fiters-btn button button--secondary" type="button" data-filter="all">
+            All
+          </button>
+          <!-- <button class=" fiters-btn button button--secondary" type="button" data-filter="development">
           Development
         </button> -->
-        <button class=" fiters-btn button button--secondary" type="button" data-filter="react">
-          React
-        </button>
-        <button class="fiters-btn button button--secondary" type="button" data-filter="wordpress">
-          Wordpress
-        </button>
-        <button class="fiters-btn button button--secondary" type="button" data-filter="design">
-          Design
-        </button>
+          <button class="fiters-btn button button--secondary" type="button" data-filter="wordpress">
+            Wordpress
+          </button>
+          <button class=" fiters-btn button button--secondary" type="button" data-filter="react">
+            React
+          </button>
+          <button class="fiters-btn button button--secondary" type="button" data-filter="design">
+            Design
+          </button>
+        </div>
       </div>
+
       <ul class="works__list">
-        <li class="works__item react design ">
-          <a class="works__link hover-scale" href="https://italian-pizza-eta.vercel.app/" target="_blank">
-            <img class="works__img" src="./images/images/works/pizza.webp" alt="ArtWalk Shoes Online Store" width="690"
-              height="350" loading="lazy">
+        <li class="works__item wordpress design ">
+          <a class="works__link hover-scale" href="https://sigroup.com.ua/" target="_blank">
+            <img class="works__img" src="./images/images/works/portfolio/sig.webp" alt="Strategic Investment Group"
+              width="690" height="350" loading="lazy">
           </a>
           <article class="work-card ">
             <p class="work-card__subtitle">
               Design & Development
             </p>
             <h2 class="work-card__title work-card__title--small title-anim">
-              Italian Pizza
+              Strategic Investment Group
             </h2>
-
-            <!-- <p class="work-card__text work-card__text--small ">
-              Italian Pizza is a web application for ordering delicious pizzas online, built using the latest web
-              technologies, including React and SCSS, to deliver a visually appealing and responsive design.
-            </p> -->
             <div class="work-card__bottom work-card__bottom--small">
               <ul class="skills work-card__skills works__skills">
                 <li class="skills__item">
                   <svg class="skills__icon" width="20" height="20">
-                    <use href="./images/icons/symbol-defs.svg#icon-react"></use>
+                    <use href="./images/icons/symbol-defs.svg#icon-html"></use>
+                  </svg>
+                </li>
+                <li class="skills__item">
+                  <svg class="skills__icon" width="20" height="20">
+                    <use href="./images/icons/symbol-defs.svg#icon-js"></use>
                   </svg>
                 </li>
                 <li class="skills__item">
@@ -175,22 +178,18 @@
                 </li>
                 <li class="skills__item">
                   <svg class="skills__icon" width="20" height="20">
+                    <use href="./images/icons/symbol-defs.svg#icon-wp"></use>
+                  </svg>
+                </li>
+                <li class="skills__item">
+                  <svg class="skills__icon" width="20" height="20">
                     <use href="./images/icons/symbol-defs.svg#icon-figma"></use>
                   </svg>
                 </li>
               </ul>
               <ul class="work-card__btns">
-                <li class="work-card__btn">
-                  <a class="work-card__btn-link button button--secondary" href="https://github.com/oilprint/pizza"
-                    target="_blank">
-                    Code
-                    <svg class="button__icon" width="20" height="20">
-                      <use href="./images/icons/symbol-defs.svg#icon-github-btn"></use>
-                    </svg>
-                  </a>
-                </li>
                 <li class="work__btn">
-                  <a href="https://italian-pizza-eta.vercel.app/" class="work-card__btn-link button" target="_blank">
+                  <a href="https://sigroup.com.ua/" class="work-card__btn-link button" target="_blank">
                     Life Site
                     <svg class="button__icon" width="20" height="20">
                       <use href="./images/icons/symbol-defs.svg#icon-outside"></use>
@@ -201,10 +200,10 @@
             </div>
           </article>
         </li>
-        <li class="works__item react design ">
-          <a class="works__link hover-scale" href="https://education-center-one.vercel.app/" target="_blank">
-            <img class="works__img" src="./images/images/works/education.webp" alt="website" width="690" height="350"
-              loading="lazy">
+        <li class="works__item react design">
+          <a class="works__link hover-scale" href="https://tech-group.vercel.app/" target="_blank">
+            <img class="works__img" src="./images/images/works/portfolio/education.webp" alt="website Education center"
+              width="690" height="350" loading="lazy">
           </a>
           <article class="work-card">
             <p class="work-card__subtitle">
@@ -242,7 +241,59 @@
                   </a>
                 </li>
                 <li class="work__btn">
-                  <a href="https://education-center-one.vercel.app/" class="work-card__btn-link button" target="_blank">
+                  <a href="https://tech-group.vercel.app/" class="work-card__btn-link button" target="_blank">
+                    Life Site
+                    <svg class="button__icon" width="20" height="20">
+                      <use href="./images/icons/symbol-defs.svg#icon-outside"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </article>
+        </li>
+        <li class="works__item react design">
+          <a class="works__link hover-scale" href="https://italian-pizza-eta.vercel.app/" target="_blank">
+            <img class="works__img" src="./images/images/works/portfolio/italian_pizza.webp" alt="Italian pizza online"
+              width="690" height="350" loading="lazy">
+          </a>
+          <article class="work-card ">
+            <p class="work-card__subtitle">
+              Design & Development
+            </p>
+            <h2 class="work-card__title work-card__title--small title-anim">
+              Italian Pizza
+            </h2>
+            <div class="work-card__bottom work-card__bottom--small">
+              <ul class="skills work-card__skills works__skills">
+                <li class="skills__item">
+                  <svg class="skills__icon" width="20" height="20">
+                    <use href="./images/icons/symbol-defs.svg#icon-react"></use>
+                  </svg>
+                </li>
+                <li class="skills__item">
+                  <svg class="skills__icon" width="20" height="20">
+                    <use href="./images/icons/symbol-defs.svg#icon-sass"></use>
+                  </svg>
+                </li>
+                <li class="skills__item">
+                  <svg class="skills__icon" width="20" height="20">
+                    <use href="./images/icons/symbol-defs.svg#icon-figma"></use>
+                  </svg>
+                </li>
+              </ul>
+              <ul class="work-card__btns">
+                <li class="work-card__btn">
+                  <a class="work-card__btn-link button button--secondary" href="https://github.com/oilprint/pizza"
+                    target="_blank">
+                    Code
+                    <svg class="button__icon" width="20" height="20">
+                      <use href="./images/icons/symbol-defs.svg#icon-github-btn"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="work__btn">
+                  <a href="https://italian-pizza-eta.vercel.app/" class="work-card__btn-link button" target="_blank">
                     Life Site
                     <svg class="button__icon" width="20" height="20">
                       <use href="./images/icons/symbol-defs.svg#icon-outside"></use>
@@ -254,27 +305,142 @@
           </article>
         </li>
         <li class="works__item wordpress design ">
-          <a class="works__link hover-scale" href="https://italian-pizza-eta.vercel.app/" target="_blank">
-            <img class="works__img" src="./images/images/works/pizza.webp" alt="ArtWalk Shoes Online Store" width="690"
-              height="350" loading="lazy">
+          <a class="works__link hover-scale" href="https://pitch-apps-dark.vercel.app/" target="_blank">
+            <img class="works__img" src="./images/images/works/portfolio/pitch.webp" alt="Website Pitch Apps"
+              width="690" height="350" loading="lazy">
           </a>
-          <article class="work-card ">
+          <article class="work-card">
             <p class="work-card__subtitle">
               Design & Development
             </p>
             <h2 class="work-card__title work-card__title--small title-anim">
-              Italian Pizza
+              Pitch Apps
             </h2>
-
-            <!-- <p class="work-card__text work-card__text--small ">
-              Italian Pizza is a web application for ordering delicious pizzas online, built using the latest web
-              technologies, including React and SCSS, to deliver a visually appealing and responsive design.
-            </p> -->
             <div class="work-card__bottom work-card__bottom--small">
               <ul class="skills work-card__skills works__skills">
                 <li class="skills__item">
                   <svg class="skills__icon" width="20" height="20">
-                    <use href="./images/icons/symbol-defs.svg#icon-react"></use>
+                    <use href="./images/icons/symbol-defs.svg#icon-html"></use>
+                  </svg>
+                </li>
+                <li class="skills__item">
+                  <svg class="skills__icon" width="20" height="20">
+                    <use href="./images/icons/symbol-defs.svg#icon-js"></use>
+                  </svg>
+                </li>
+                <li class="skills__item">
+                  <svg class="skills__icon" width="20" height="20">
+                    <use href="./images/icons/symbol-defs.svg#icon-sass"></use>
+                  </svg>
+                </li>
+                <li class="skills__item">
+                  <svg class="skills__icon" width="20" height="20">
+                    <use href="./images/icons/symbol-defs.svg#icon-wp"></use>
+                  </svg>
+                </li>
+                <li class="skills__item">
+                  <svg class="skills__icon" width="20" height="20">
+                    <use href="./images/icons/symbol-defs.svg#icon-figma"></use>
+                  </svg>
+                </li>
+              </ul>
+              <ul class="work-card__btns">
+                <li class="work__btn">
+                  <a href="https://pitch-apps-dark.vercel.app/" class="work-card__btn-link button" target="_blank">
+                    Life Site
+                    <svg class="button__icon" width="20" height="20">
+                      <use href="./images/icons/symbol-defs.svg#icon-outside"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </article>
+        </li>
+        <li class="works__item wordpress design">
+          <a class="works__link hover-scale" href="https://family-dental-clinic.vercel.app/" target="_blank">
+            <img class="works__img" src="./images/images/works/portfolio/dental-family.webp"
+              alt="website Dental clinic Family Dental" width="690" height="350" loading="lazy">
+          </a>
+          <article class="work-card">
+            <p class="work-card__subtitle">
+              Design & Development
+            </p>
+            <h2 class="work-card__title work-card__title--small title-anim">
+              Dental clinic "Family Dental"
+            </h2>
+            <div class="work-card__bottom work-card__bottom--small">
+              <ul class="skills work-card__skills works__skills">
+                <li class="skills__item">
+                  <svg class="skills__icon" width="20" height="20">
+                    <use href="./images/icons/symbol-defs.svg#icon-html"></use>
+                  </svg>
+                </li>
+                <li class="skills__item">
+                  <svg class="skills__icon" width="20" height="20">
+                    <use href="./images/icons/symbol-defs.svg#icon-js"></use>
+                  </svg>
+                </li>
+                <li class="skills__item">
+                  <svg class="skills__icon" width="20" height="20">
+                    <use href="./images/icons/symbol-defs.svg#icon-sass"></use>
+                  </svg>
+                </li>
+                <li class="skills__item">
+                  <svg class="skills__icon" width="20" height="20">
+                    <use href="./images/icons/symbol-defs.svg#icon-wp"></use>
+                  </svg>
+                </li>
+                <li class="skills__item">
+                  <svg class="skills__icon" width="20" height="20">
+                    <use href="./images/icons/symbol-defs.svg#icon-figma"></use>
+                  </svg>
+                </li>
+              </ul>
+              <ul class="work-card__btns">
+                <li class="work-card__btn">
+                  <a href="https://github.com/oilprint/family-dental-clinic/tree/main"
+                    class="work-card__btn-link button button--secondary" target="_blank">
+                    Code
+                    <svg class="button__icon" width="20" height="20">
+                      <use href="./images/icons/symbol-defs.svg#icon-github-btn"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="work__btn">
+                  <a href="https://family-dental-clinic.vercel.app/" class="work-card__btn-link button" target="_blank">
+                    Life Site
+                    <svg class="button__icon" width="20" height="20">
+                      <use href="./images/icons/symbol-defs.svg#icon-outside"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </article>
+        </li>
+        <li class="works__item design">
+          <a class="works__link hover-scale" href="https://adventure-online.vercel.app/" target="_blank">
+            <img class="works__img" src="./images/images/works/portfolio/adventure.webp"
+              alt="website Travel agency Adventure-online" width="690" height="350" loading="lazy">
+          </a>
+          <article class="work-card">
+            <p class="work-card__subtitle">
+              Design & Front-end development
+            </p>
+            <h2 class="work-card__title work-card__title--small title-anim">
+              Travel agency "Adventure-online"
+            </h2>
+            <div class="work-card__bottom work-card__bottom--small">
+              <ul class="skills work-card__skills works__skills">
+                <li class="skills__item">
+                  <svg class="skills__icon" width="20" height="20">
+                    <use href="./images/icons/symbol-defs.svg#icon-html"></use>
+                  </svg>
+                </li>
+                <li class="skills__item">
+                  <svg class="skills__icon" width="20" height="20">
+                    <use href="./images/icons/symbol-defs.svg#icon-js"></use>
                   </svg>
                 </li>
                 <li class="skills__item">
@@ -290,7 +456,127 @@
               </ul>
               <ul class="work-card__btns">
                 <li class="work-card__btn">
-                  <a class="work-card__btn-link button button--secondary" href="https://github.com/oilprint/pizza"
+                  <a href="https://github.com/oilprint/adventure-online-com"
+                    class="work-card__btn-link button button--secondary" target="_blank">
+                    Code
+                    <svg class="button__icon" width="20" height="20">
+                      <use href="./images/icons/symbol-defs.svg#icon-github-btn"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="work__btn">
+                  <a href="https://adventure-online.vercel.app/" class="work-card__btn-link button" target="_blank">
+                    Life Site
+                    <svg class="button__icon" width="20" height="20">
+                      <use href="./images/icons/symbol-defs.svg#icon-outside"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </article>
+        </li>
+        <li class="works__item design">
+          <a class="works__link hover-scale" href="https://oilprint.github.io/patricia-wedding/" target="_blank">
+            <img class="works__img" src="./images/images/works/portfolio/wedding-online.webp"
+              alt="website Patricia Wedding shop" width="690" height="350" loading="lazy">
+          </a>
+          <article class="work-card">
+            <p class="work-card__subtitle">
+              Design & Front-end Development
+            </p>
+            <h2 class="work-card__title work-card__title--small title-anim">
+              Patricia Wedding shop
+            </h2>
+            <div class="work-card__bottom work-card__bottom--small">
+              <ul class="skills work-card__skills works__skills">
+                <li class="skills__item">
+                  <svg class="skills__icon" width="20" height="20">
+                    <use href="./images/icons/symbol-defs.svg#icon-html"></use>
+                  </svg>
+
+                <li class="skills__item">
+                  <svg class="skills__icon" width="20" height="20">
+                    <use href="./images/icons/symbol-defs.svg#icon-js"></use>
+                  </svg>
+                </li>
+                <li class="skills__item">
+                  <svg class="skills__icon" width="20" height="20">
+                    <use href="./images/icons/symbol-defs.svg#icon-sass"></use>
+                  </svg>
+                </li>
+                <li class="skills__item">
+                  <svg class="skills__icon" width="20" height="20">
+                    <use href="./images/icons/symbol-defs.svg#icon-figma"></use>
+                  </svg>
+                </li>
+              </ul>
+              <ul class="work-card__btns">
+                <li class="work-card__btn">
+                  <a href="https://github.com/oilprint/patricia-wedding"
+                    class="work-card__btn-link button button--secondary" target="_blank">
+                    Code
+                    <svg class="button__icon" width="20" height="20">
+                      <use href="./images/icons/symbol-defs.svg#icon-github-btn"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="work__btn">
+                  <a href="https://oilprint.github.io/patricia-wedding/" class="work-card__btn-link button"
+                    target="_blank">
+                    Life Site
+                    <svg class="button__icon" width="20" height="20">
+                      <use href="./images/icons/symbol-defs.svg#icon-outside"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </article>
+        </li>
+        <li class="works__item design">
+          <a class="works__link hover-scale" href="https://bulldogclub.vercel.app/" target="_blank">
+            <img class="works__img" src="./images/images/works/portfolio/dogclub.webp" alt="Bulldog club website"
+              width="690" height="350" loading="lazy">
+          </a>
+          <article class="work-card">
+            <p class="work-card__subtitle">
+              Design & Development
+            </p>
+            <h2 class="work-card__title work-card__title--small title-anim">
+              Bulldog club website
+            </h2>
+            <div class="work-card__bottom work-card__bottom--small">
+              <ul class="skills work-card__skills works__skills">
+                <li class="skills__item">
+                  <svg class="skills__icon" width="20" height="20">
+                    <use href="./images/icons/symbol-defs.svg#icon-html"></use>
+                  </svg>
+                </li>
+                <li class="skills__item">
+                  <svg class="skills__icon" width="20" height="20">
+                    <use href="./images/icons/symbol-defs.svg#icon-js"></use>
+                  </svg>
+                </li>
+                <li class="skills__item">
+                  <svg class="skills__icon" width="20" height="20">
+                    <use href="./images/icons/symbol-defs.svg#icon-sass"></use>
+                  </svg>
+                </li>
+                <li class="skills__item">
+                  <svg class="skills__icon" width="20" height="20">
+                    <use href="./images/icons/symbol-defs.svg#icon-wp"></use>
+                  </svg>
+                </li>
+                <li class="skills__item">
+                  <svg class="skills__icon" width="20" height="20">
+                    <use href="./images/icons/symbol-defs.svg#icon-figma"></use>
+                  </svg>
+                </li>
+              </ul>
+              <ul class="work-card__btns">
+                <li class="work-card__btn">
+                  <a href="https://github.com/oilprint/bulldogclub" class="work-card__btn-link button button--secondary"
                     target="_blank">
                     Code
                     <svg class="button__icon" width="20" height="20">
@@ -299,7 +585,7 @@
                   </a>
                 </li>
                 <li class="work__btn">
-                  <a href="https://italian-pizza-eta.vercel.app/" class="work-card__btn-link button" target="_blank">
+                  <a href="https://bulldogclub.vercel.app/" class="work-card__btn-link button" target="_blank">
                     Life Site
                     <svg class="button__icon" width="20" height="20">
                       <use href="./images/icons/symbol-defs.svg#icon-outside"></use>
@@ -310,17 +596,74 @@
             </div>
           </article>
         </li>
-        <li class="works__item wp  design ">
-          <a class="works__link hover-scale" href="https://education-center-one.vercel.app/" target="_blank">
-            <img class="works__img" src="./images/images/works/education.webp" alt="website" width="690" height="350"
-              loading="lazy">
+        <li class="works__item design">
+          <a class="works__link hover-scale" href="https://family-dental.vercel.app/" target="_blank">
+            <img class="works__img" src="./images/images/works/portfolio/dentist-clinic.webp"
+              alt="Dental Clinic Family Dental" width="690" height="350" loading="lazy">
           </a>
           <article class="work-card">
             <p class="work-card__subtitle">
               Design & Development
             </p>
             <h2 class="work-card__title work-card__title--small title-anim">
-              Education center
+              Dental Clinic Family Dental
+            </h2>
+            <div class="work-card__bottom work-card__bottom--small">
+              <ul class="skills work-card__skills works__skills">
+                <li class="skills__item">
+                  <svg class="skills__icon" width="20" height="20">
+                    <use href="./images/icons/symbol-defs.svg#icon-html"></use>
+                  </svg>
+                </li>
+                <li class="skills__item">
+                  <svg class="skills__icon" width="20" height="20">
+                    <use href="./images/icons/symbol-defs.svg#icon-js"></use>
+                  </svg>
+                </li>
+                <li class="skills__item">
+                  <svg class="skills__icon" width="20" height="20">
+                    <use href="./images/icons/symbol-defs.svg#icon-sass"></use>
+                  </svg>
+                </li>
+                <li class="skills__item">
+                  <svg class="skills__icon" width="20" height="20">
+                    <use href="./images/icons/symbol-defs.svg#icon-figma"></use>
+                  </svg>
+                </li>
+              </ul>
+              <ul class="work-card__btns">
+                <li class="work-card__btn">
+                  <a href="https://github.com/oilprint/family-dental"
+                    class="work-card__btn-link button button--secondary" target="_blank">
+                    Code
+                    <svg class="button__icon" width="20" height="20">
+                      <use href="./images/icons/symbol-defs.svg#icon-github-btn"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="work__btn">
+                  <a href="https://family-dental.vercel.app/" class="work-card__btn-link button" target="_blank">
+                    Life Site
+                    <svg class="button__icon" width="20" height="20">
+                      <use href="./images/icons/symbol-defs.svg#icon-outside"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </article>
+        </li>
+        <li class="works__item react design">
+          <a class="works__link hover-scale" href="https://art-shoes-three.vercel.app/" target="_blank">
+            <img class="works__img" src="./images/images/works/portfolio/art-shoes.webp"
+              alt="website Shop Artwalk Shoes" width="690" height="350" loading="lazy">
+          </a>
+          <article class="work-card">
+            <p class="work-card__subtitle">
+              Design & Development
+            </p>
+            <h2 class="work-card__title work-card__title--small title-anim">
+              Shop Artwalk Shoes
             </h2>
             <div class="work-card__bottom work-card__bottom--small">
               <ul class="skills work-card__skills works__skills">
@@ -342,8 +685,8 @@
               </ul>
               <ul class="work-card__btns">
                 <li class="work-card__btn">
-                  <a href="https://github.com/oilprint/tech_group/tree/main"
-                    class="work-card__btn-link button button--secondary" target="_blank">
+                  <a href="https://github.com/oilprint/art-shoes" class="work-card__btn-link button button--secondary"
+                    target="_blank">
                     Code
                     <svg class="button__icon" width="20" height="20">
                       <use href="./images/icons/symbol-defs.svg#icon-github-btn"></use>
@@ -351,59 +694,7 @@
                   </a>
                 </li>
                 <li class="work__btn">
-                  <a href="https://education-center-one.vercel.app/" class="work-card__btn-link button" target="_blank">
-                    Life Site
-                    <svg class="button__icon" width="20" height="20">
-                      <use href="./images/icons/symbol-defs.svg#icon-outside"></use>
-                    </svg>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </article>
-        </li>
-        <li class="works__item wp  design development">
-          <a class="works__link hover-scale" href="https://education-center-one.vercel.app/" target="_blank">
-            <img class="works__img" src="./images/images/works/education.webp" alt="website" width="690" height="350"
-              loading="lazy">
-          </a>
-          <article class="work-card">
-            <p class="work-card__subtitle">
-              Design & Development
-            </p>
-            <h2 class="work-card__title work-card__title--small title-anim">
-              Education center
-            </h2>
-            <div class="work-card__bottom work-card__bottom--small">
-              <ul class="skills work-card__skills works__skills">
-                <li class="skills__item">
-                  <svg class="skills__icon" width="20" height="20">
-                    <use href="./images/icons/symbol-defs.svg#icon-react"></use>
-                  </svg>
-                </li>
-                <li class="skills__item">
-                  <svg class="skills__icon" width="20" height="20">
-                    <use href="./images/icons/symbol-defs.svg#icon-tailwind-small"></use>
-                  </svg>
-                </li>
-                <li class="skills__item">
-                  <svg class="skills__icon" width="20" height="20">
-                    <use href="./images/icons/symbol-defs.svg#icon-figma"></use>
-                  </svg>
-                </li>
-              </ul>
-              <ul class="work-card__btns">
-                <li class="work-card__btn">
-                  <a href="https://github.com/oilprint/tech_group/tree/main"
-                    class="work-card__btn-link button button--secondary" target="_blank">
-                    Code
-                    <svg class="button__icon" width="20" height="20">
-                      <use href="./images/icons/symbol-defs.svg#icon-github-btn"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="work__btn">
-                  <a href="https://education-center-one.vercel.app/" class="work-card__btn-link button" target="_blank">
+                  <a href="https://art-shoes-three.vercel.app/" class="work-card__btn-link button" target="_blank">
                     Life Site
                     <svg class="button__icon" width="20" height="20">
                       <use href="./images/icons/symbol-defs.svg#icon-outside"></use>
