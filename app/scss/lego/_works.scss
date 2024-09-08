@@ -1,12 +1,13 @@
 .works {
   position: relative;
   z-index: 3;
-  padding-top: 50px;
+  padding-top: 20px;
   padding-bottom: 100px;
   background-color: $light;
 
   @media (max-width: 768px) {
     padding-bottom: 70px;
+    padding-top: 0;
   }
 
   &__wrapper {
@@ -61,27 +62,38 @@
     align-items: center;
     gap: 16px;
     margin-bottom: 40px;
+    flex-wrap: wrap;
   }
 
+  &__item {
+    @media (max-width: 768px) {
+      max-width: 576px;
+      width: 100%;
+      margin: 0 auto;
+    }
+  }
 
   &__list {
     position: relative;
     z-index: 3;
-    // display: flex;
-    // gap: 50px;
-    // justify-content: space-between;
-    // flex-wrap: wrap;
-
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
     grid-column-gap: 50px;
     grid-row-gap: 50px;
 
-    @media (max-width: 768px) {
+    @media (max-width: 1024px) {
       flex-wrap: wrap;
       gap: 30px;
       row-gap: 50px;
+    }
+
+    @media (max-width: 768px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    @media (max-width: 576px) {
+      row-gap: 30px;
     }
   }
 
