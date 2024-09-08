@@ -141,9 +141,8 @@ body {
   line-height: 1;
   color: $accent;
 
-
   @media (max-width: 1440px) {
-    font-size: calc(52px + (140 - 52) * ((100vw - 375px) / (1440 - 375)));
+    font-size: calc(48px + (140 - 48) * ((100vw - 375px) / (1440 - 375)));
   }
 }
 
@@ -155,6 +154,10 @@ body {
 
   @media (max-width: 1440px) {
     font-size: calc(52px + (210 - 52) * ((100vw - 375px) / (1440 - 375)));
+  }
+
+  @media (max-width: 576px) {
+    font-size: 72px;
   }
 }
 
@@ -176,6 +179,7 @@ body {
 
     @media (max-width: 480px) {
       font-size: 18px;
+      margin-bottom: 4px;
     }
   }
 
@@ -190,12 +194,20 @@ body {
       margin-bottom: 16px;
     }
 
-    @media (max-width: 480px) {
+    @media (max-width: 768px) {
       font-size: 32px;
     }
 
     &--small {
       margin-bottom: 20px;
+
+      @media (max-width: 768px) {
+        margin-bottom: 16px;
+      }
+
+      @media (max-width: 480px) {
+        margin-bottom: 8px;
+      }
     }
   }
 
@@ -226,6 +238,10 @@ body {
 
     @media (max-width: 768px) {
       margin-bottom: 16px;
+    }
+
+    @media (max-width: 480px) {
+      margin-bottom: 8px;
     }
   }
 
@@ -258,7 +274,11 @@ body {
     }
 
     @media (max-width: 768px) {
-      display: block;
+      margin-bottom: 12px;
+    }
+
+    @media (max-width: 480px) {
+      margin-bottom: 4px;
     }
   }
 
@@ -290,10 +310,7 @@ body {
       justify-content: space-between;
       align-items: center;
     }
-
-
   }
-
 }
 
 .skills {

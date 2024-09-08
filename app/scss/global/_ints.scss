@@ -58,11 +58,9 @@
 .button {
   position: relative;
   z-index: 10;
-  display: block;
   width: fit-content;
   border-radius: 8px;
   padding: 8px 24px;
-  display: inline-block;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -71,6 +69,7 @@
   overflow: hidden;
   border: 1px solid $accent;
   font-size: 18px;
+  flex-shrink: 0;
 
   &::before {
     position: absolute;
