@@ -54,10 +54,6 @@
     row-gap: 0;
     margin-bottom: 20px;
 
-    @media (max-width: 768px) {
-      margin-bottom: 8px;
-    }
-
     @media (max-width: 576px) {
       margin-bottom: 0;
     }
@@ -183,8 +179,7 @@
 
   &__img {
     object-fit: cover;
-    transition: transform 0.3s ease-in;
-
     height: auto;
+    transition: transform 0.3s ease-in;
   }
 }

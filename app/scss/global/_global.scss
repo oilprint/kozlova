@@ -169,6 +169,8 @@ body {
 }
 
 .work-card {
+  display: flex;
+  flex-direction: column;
 
   &__subtitle {
     font-size: 20px;
@@ -279,6 +281,16 @@ body {
     @media (max-width: 768px) {
       margin-bottom: 12px;
       display: block;
+    }
+
+    &--works-page {
+      display: block;
+      order: -1;
+
+      @media (max-width: 768px) {
+        order: 0;
+      }
+
     }
   }
 
