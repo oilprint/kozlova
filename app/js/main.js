@@ -2,9 +2,9 @@
 document.addEventListener('DOMContentLoaded', () => {
   'use strict';
 
+  gsap.registerPlugin(ScrollTrigger);
 
-
-
+  
       //Mobile Menu
     const burger = document.querySelector('.header__mobile-btn');
 
@@ -31,8 +31,6 @@ document.addEventListener('DOMContentLoaded', () => {
         cursorScale = document.querySelectorAll(".hover-scale"),
         cursorCycle = document.querySelectorAll(".hover-cycle")
 
-        console.log(cursorScale);
-            
     let posX = 0,
         posY = 0,
         mouseX = 0,
@@ -89,9 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	}
 
 	cursor();
-  
 
-  //curcor2 end
 
 
   //smooth scroll
@@ -110,28 +106,79 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
   });
+  //smooth scroll END
 
-  //margue
-  function marquee() {
-    gsap.to('.marq__wrapp--1', {
-			scrollTrigger: {
-				trigger: '.horizontal-items',
-				start: 'top bottom',
-				scrub: 2.4
-			},
-			xPercent: -30
-		})
-    gsap.to('.marq__wrapp--2', {
-			scrollTrigger: {
-				trigger: '.marq__wrapp--2',
-				start: 'top bottom',
-				scrub: 1.9
-			},
-			xPercent: 40
-		})
+  //word-card title animation
+  const workTitle = document.querySelectorAll('.title-anim');
+  workTitle.forEach((item) => {
+    const text = new SplitType(item, {types: 'words, chars'})
+
+    gsap.from(text.chars, {
+      scrollTrigger: {
+        trigger: item, 
+        start: 'top 80%',
+        end: 'top 50%',
+        scrub: true
+      }, 
+      css: {
+        opacity: 0,
+      },
+      
+      stagger: 0.1
+    })
+  });
+  //word-card title animation END
+
+  //skills icons animation
+  
+  function animateListItems(sections, listItemSelector) {
+  sections.forEach(section => {
+    const listItems = section.querySelectorAll(listItemSelector);
+    listItems.forEach(item => {
+      gsap.to(item, {
+        scrollTrigger: {
+          trigger: section,
+          start: 'center 60%',
+          end: 'bottom 20%',
+          scrub: true
+        },
+        css: {
+          filter: "saturate(90%)"
+        },
+        stagger: 0.1    
+      });
+    });
+  });
   };
-  marquee();
 
+  const sections = document.querySelectorAll(".work-card");
+  animateListItems(sections, ".skills__item");
+
+  //skills icons animation END
+
+  //initial Lenis for window>768px
+  const laptopScreen = window.matchMedia('(min-width:768px)');
+
+  if (laptopScreen.matches) {
+    // Lenis Smooth scroll
+    const lenis = new Lenis({
+      duration: 1.2,
+    });
+
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+
+    lenis.on('scroll', ScrollTrigger.update);
+
+    gsap.ticker.add((time) => {
+      lenis.raf(time * 1000);
+    });
+  }
+  //initial Lenis for window>768px END
 
 
 });

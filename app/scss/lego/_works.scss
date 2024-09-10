@@ -126,7 +126,6 @@
     }
   }
 
-
   &__item {
     width: calc((100% - 50px) / 2);
 
@@ -139,8 +138,6 @@
       width: 100%;
       margin: 0 auto;
     }
-
-
 
     &.hide {
       opacity: 0;
@@ -189,5 +186,4 @@
 
     height: auto;
   }
-
 }

@@ -44,5 +44,29 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+
+  const tl2=gsap.timeline();
+
+  function titleWorksAnimation() {
+
+    tl2.from('.works__title-h1', 1, {
+      opacity:0,
+      scaleY: 0.6,
+      skewX: '10deg',
+      y: 40,
+      ease: 'power4.inOut'
+    })
+    .from('.works__headline', 1, {
+      opacity:0,
+      scaleY: 0.6,
+      skewX: '10deg',
+      y: 40,
+      ease: 'power4.inOut'
+    },
+    0.3
+    )
+  };
+  titleWorksAnimation(); 
+
     
 });
