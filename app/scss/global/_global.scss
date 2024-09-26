@@ -189,18 +189,18 @@ body {
   }
 
   &__title {
-    font-size: 36px;
+    font-size: 26px;
     line-height: 1;
     font-weight: 700;
     margin-bottom: 20px;
 
     @media (max-width: 992px) {
-      font-size: 36px;
+      font-size: 26px;
       margin-bottom: 16px;
     }
 
     @media (max-width: 768px) {
-      font-size: 32px;
+      font-size: 24px;
     }
 
     &--small {
