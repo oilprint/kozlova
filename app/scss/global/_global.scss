@@ -286,6 +286,7 @@ body {
     &--works-page {
       display: block;
       order: -1;
+      max-width: 760px;
 
       @media (max-width: 768px) {
         order: 0;
