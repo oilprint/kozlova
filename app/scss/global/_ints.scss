@@ -136,6 +136,21 @@
     &:active {
       color: $dark;
     }
+
+    &.is-active {
+      background-color: $accent;
+      color: $light;
+      border-color: $accent;
+
+      &::after {
+        background-color: $accent;
+      }
+
+      &::before {
+        background-color: $accent;
+        transform: translateX(100%);
+      }
+    }
   }
 
   &__icon {
